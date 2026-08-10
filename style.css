@@ -459,6 +459,629 @@ section:nth-of-type(even) {
     color: var(--primary-blue);
 }
 
+/* ==========================================================================
+   ESTILIZAÇÃO DA SEÇÃO 1 (Inspirada no Mockup 1)
+   ========================================================================== */
+.plantao-ofertas-section {
+    padding: 5rem 0;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Faixa superior de ofertas horizontais */
+.deals-banner-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.deal-card-coral {
+    background: #FF6B4A;
+    /* Cor de destaque inspirada no mockup 1 */
+    color: white;
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+    min-width: 180px;
+}
+
+.deal-card-coral:hover {
+    transform: translateY(-4px);
+}
+
+.deal-card-coral h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+
+.deal-card-coral a {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff9f8;
+    text-decoration: underline;
+    letter-spacing: 0.03em;
+}
+
+/* Vitrine de Top Categorias com imagens circulares */
+.top-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.top-cat-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-cat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-blue);
+}
+
+.cat-circle-img {
+    width: 90px;
+    height: 90px;
+    background-color: var(--bg-app);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    border: 2px solid var(--border);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.discount-badge-pill {
+    display: inline-block;
+    background-color: #CC0000;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.top-cat-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+
+.top-cat-item p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+}
+
+/* Responsividade específica da Seção 1 */
+@media (max-width: 1024px) {
+    .deals-banner-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .top-categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .deals-banner-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-categories-grid {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA SEÇÃO 2 (Inspirada no Mockup 2 - Vitrine de Serviços/Produtos)
+   ========================================================================== */
+.servicos-produtos-section {
+    padding: 5rem 0;
+    background-color: var(--bg-app);
+    border-bottom: 1px solid var(--border);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.produto-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-blue);
+}
+
+/* Badges e Selos nos cantos superiores */
+.badge-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+}
+
+.badge-tag.bestseller {
+    background-color: #d97706;
+    /* Amarelo/Laranja estilo Bestseller */
+}
+
+.badge-tag.supersaver {
+    background-color: var(--secondary-color);
+    /* Verde */
+}
+
+.badge-tag.off {
+    background-color: var(--accent-red);
+    /* Vermelho */
+}
+
+.produto-img-wrapper {
+    width: 100%;
+    height: 140px;
+    background: var(--bg-app);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    margin-top: 10px;
+    border: 1px dashed var(--border);
+}
+
+.produto-info h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+    min-height: 2.6rem;
+}
+
+.produto-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    min-height: 2.2rem;
+}
+
+.unidade-selector {
+    margin-bottom: 1rem;
+}
+
+.unidade-selector label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.select-metrica {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: var(--poppins);
+    font-size: 0.85rem;
+    background-color: #fff;
+    color: var(--text-main);
+}
+
+.preco-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+}
+
+.preco-atual {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.preco-antigo {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.card-footer-action {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.quantidade-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 4px 10px;
+    background: #f8fafc;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-main);
+    padding: 0 8px;
+}
+
+.qty-btn:hover {
+    color: var(--primary-blue);
+}
+
+.btn-sm {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsividade específica da Seção 2 */
+@media (max-width: 1200px) {
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+/* ==========================================================================
+   ESTILIZAÇÃO DA SEÇÃO 3 (Inspirada no Mockup 3 - Múltiplas Colunas e Listas)
+   ========================================================================== */
+.destaques-multiplos-section {
+  padding: 5rem 0;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.coluna-destaque-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.coluna-destaque-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-blue);
+}
+
+.coluna-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.coluna-header-top h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0;
+}
+
+.carrossel-setas {
+  display: flex;
+  gap: 6px;
+}
+
+.carrossel-setas button {
+  background: var(--bg-app);
+  border: 1px solid var(--border);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.carrossel-setas button:hover {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.lista-itens-compactos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-compacto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.item-compacto:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.mini-img-box {
+  width: 50px;
+  height: 50px;
+  background: var(--bg-app);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.item-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-info h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.stars-mini {
+  color: #fbbf24;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.preco-mini {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.btn-mini-add {
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 47, 135, 0.08);
+  color: var(--primary-blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-mini-add:hover {
+  background: var(--primary-blue);
+  color: white;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA SEÇÃO 4 (Inspirada no Mockup 4 - Parceiros, Passos e Prova Social)
+   ========================================================================== */
+.parceiros-autoridade-section {
+  padding: 5rem 0;
+  background-color: var(--bg-app);
+  border-bottom: 1px solid var(--border);
+}
+
+.parceiros-header-wrapper {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.parceiros-header-wrapper p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.marcos-logos-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  opacity: 0.75;
+}
+
+.logo-text-mock {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+/* Faixa de Benefícios Explicativa (01, 02, 03) estilo Mockup 4 */
+.beneficios-faixa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 3rem;
+}
+
+.beneficio-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.beneficio-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  background: rgba(0, 47, 135, 0.08);
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.beneficio-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.beneficio-content p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Cards de Depoimento V4 */
+.card-depoimento-v4 {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.user-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.avatar-mock {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-app);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  border: 1px solid var(--border);
+}
+
+.user-profile-header strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.user-profile-header span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.card-depoimento-v4 p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.card-depoimento-v4 .stars {
+  color: #fbbf24;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+/* Responsividade da Seção 4 */
+@media (max-width: 992px) {
+  .beneficios-faixa-grid {
+    grid-template-columns: 1fr;
+  }
+  .marcos-logos-grid {
+    gap: 1.5rem;
+  }
+}
 /* PROVA SOCIAL / DEPOIMENTOS */
 .stars {
     color: #fbbf24;
