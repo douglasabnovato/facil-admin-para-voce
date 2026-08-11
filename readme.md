@@ -58,15 +58,18 @@ Abaixo está o mapeamento completo e ordenado das seções presentes na arquitet
 A organização de diretórios e arquivos foi planejada para manter o código limpo, modular e de fácil manutenção:
 
 ```text
-facil-admin-para-voce/
-├── index.html       # Estrutura principal da Landing Page contendo todas as dobras
-├── style.css        # Folha de estilos unificada com o Design System responsivo
-├── script.js        # Comportamentos dinâmicos, interações de menu e submissão
-└── assets/          # Repositório de imagens mockups e arquivos visuais do projeto
-    ├── facil-admin-para-voce-1.png
-    ├── facil-admin-para-voce-2.png
-    ├── facil-admin-para-voce-3.png
-    └── facil-admin-para-voce-4.png
+FACIL-ADMIN-PARA-VOCE/
+├── assets/                          # Pasta contendo os recursos visuais da landing page
+│   ├── facil-admin-para-voce-1.png  # Imagem da síndica no condomínio (Usada nos cards de personas)
+│   ├── facil-admin-para-voce-2.png  # Imagem do empreendedor no shopping (Usada nos cards de personas)
+│   ├── facil-admin-para-voce-3.png  # Imagem do gestor no escritório (Usada na seção de velocidade)
+│   └── facil-admin-para-voce-4.png  # Imagem da administradora na recepção (Usada no Hero/Topo)
+├── .nojekyll                        # Arquivo vazio essencial que desativa o processador Jekyll do GitHub Pages
+├── deploy.yml                       # Arquivo de configuração do GitHub Actions para o deploy automatizado
+├── index.html                       # Arquivo principal contendo todas as dobras e a semântica da página
+├── readme.md                        # Documentação completa e estruturada do projeto
+├── script.js                        # Controladores lógicos, menu mobile e submissão assíncrona
+└── style.css                        # Folha de estilos customizada e Design System unificado
 ```
 
 ## 🎯 Estratégia de Marketing e Desenho da Landing Page
