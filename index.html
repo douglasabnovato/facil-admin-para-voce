@@ -30,7 +30,7 @@
 
     <main>
         <!-- DOBRA 1: HERO SECTION -->
-        <section class="hero-section">
+        <section id="hero" class="hero-section">
             <div class="container hero-grid">
                 <div class="hero-content">
                     <span class="badge-tech">Plataforma Oficial de Matching de Facilities</span>
@@ -51,34 +51,9 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="dashboard-widget">
-                        <div class="widget-header">
-                            <div class="dots"><span></span><span></span><span></span></div>
-                            <span class="status-live">LIVE: Matching em Tempo Real</span>
-                        </div>
-                        <div class="widget-body-mock">
-                            <div class="mock-card">
-                                <i class="fas fa-tools"></i>
-                                <div>
-                                    <strong>Manutenção Preventiva</strong>
-                                    <span>3 propostas recebidas em 24h</span>
-                                </div>
-                            </div>
-                            <div class="mock-card">
-                                <i class="fas fa-shield-alt"></i>
-                                <div>
-                                    <strong>Portaria & Segurança</strong>
-                                    <span>Fornecedores homologados e avaliados</span>
-                                </div>
-                            </div>
-                            <div class="mock-card">
-                                <i class="fas fa-broom"></i>
-                                <div>
-                                    <strong>Limpeza e Conservação</strong>
-                                    <span>Match perfeito para o seu condomínio</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="hero-img-wrapper">
+                        <img src="/assets/facil-admin-para-voce-4.png"
+                            alt="Administradora comercial utilizando FacilAdmin na recepção" class="hero-human-img">
                     </div>
                 </div>
             </div>
@@ -539,6 +514,52 @@
             </div>
         </section>
 
+        <!-- NOVA SEÇÃO: GALERIA DE USO (PROVA SOCIAL VISUAL) -->
+        <section id="uso-real" class="uso-real-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O Ecossistema FacilAdmin em Ação</h2>
+                    <p>Veja como síndicos, gestores e fornecedores utilizam nossa plataforma para simplificar a rotina
+                        de facilities, onde quer que estejam.</p>
+                </div>
+
+                <!-- Grid de 4 Imagens -->
+                <div class="grid-4-cols gallery-grid">
+                    <!-- Imagem 1: Shopping -->
+                    <div class="gallery-item">
+                        <img src="/assets/facil-admin-para-voce-2.png"
+                            alt="Jovem empreendedor utilizando FacilAdmin no Shopping" loading="lazy">
+                        <div class="gallery-caption"><strong>Dinamismo Urbano:</strong> Cotações rápidas entre reuniões
+                            no shopping.</div>
+                    </div>
+
+                    <!-- Imagem 2: Condomínio Residencial -->
+                    <div class="gallery-item">
+                        <img src="/assets/facil-admin-para-voce-1.png"
+                            alt="Síndica profissional gerenciando facilities no condomínio" loading="lazy">
+                        <div class="gallery-caption"><strong>Gestão no Local:</strong> Síndica aprova manutenção direto
+                            da varanda do prédio.</div>
+                    </div>
+
+                    <!-- Imagem 3: Escritório -->
+                    <div class="gallery-item">
+                        <img src="/assets/facil-admin-para-voce-3.png"
+                            alt="Gestor de operações utilizando FacilAdmin no escritório" loading="lazy">
+                        <div class="gallery-caption"><strong>Eficiência Corporativa:</strong> Gestor otimiza operações
+                            sem sair da mesa.</div>
+                    </div>
+
+                    <!-- Imagem 4: Recepção Comercial -->
+                    <div class="gallery-item">
+                        <img src="/assets/facil-admin-para-voce-4.png"
+                            alt="Administradora de condomínio comercial utilizando FacilAdmin" loading="lazy">
+                        <div class="gallery-caption"><strong>Comodidade e Controle:</strong> Administradora garante
+                            agilidade na recepção.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- SEÇÃO 4: MARCAS PARCEIRAS & CONFIANÇA COMPROVADA -->
         <section class="parceiros-autoridade-section">
             <div class="container">
@@ -695,10 +716,13 @@
             </div>
         </section>
 
-        <!-- DOBRA 6: DIFERENCIAL DE VELOCIDADE -->
-        <section class="velocidade-section">
+        <!-- ========================================== -->
+        <!-- INÍCIO: DOBRA 6 (VELOCIDADE) E ESTILOS -->
+        <!-- ========================================== -->
+        <section id="velocidade" class="velocidade-section">
             <div class="container">
                 <div class="grid-2-cols" style="align-items: center;">
+                    <!-- Lado Esquerdo: Textos e Vantagens -->
                     <div class="velocidade-content">
                         <span class="badge" style="background: rgba(5,150,105,0.1); color: var(--secondary-color);">
                             Agilidade Absoluta
@@ -728,19 +752,44 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="velocidade-card-wrapper">
-                        <div class="card dark-card">
-                            <h3>
-                                <div class="icon-circle"><i class="fas fa-bolt" style="color: #fbbf24;"></i></div>
-                                Garantia de Resposta Rápida
-                            </h3>
-                            <p>
-                                Nossa inteligência de matching prioriza fornecedores com alta taxa de resposta,
-                                garantindo que o seu condomínio nunca fique sem atendimento.
-                            </p>
-                            <a href="#contato" class="btn btn-submit-glow">
-                                Fazer Cotação Agora <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
-                            </a>
+
+                    <!-- Lado Direito: O Widget Reaproveitado com Estilo Adaptado -->
+                    <div class="velocidade-widget-wrapper">
+                        <div class="dashboard-widget widget-light-theme">
+                            <div class="widget-header">
+                                <div class="dots"><span></span><span></span><span></span></div>
+                                <span class="status-live">LIVE: Matching em Tempo Real</span>
+                            </div>
+                            <div class="widget-body-mock">
+                                <div class="mock-card">
+                                    <i class="fas fa-tools"></i>
+                                    <div>
+                                        <strong>Manutenção Preventiva</strong>
+                                        <span>3 propostas recebidas em 24h</span>
+                                    </div>
+                                </div>
+                                <div class="mock-card">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div>
+                                        <strong>Portaria & Segurança</strong>
+                                        <span>Fornecedores homologados e avaliados</span>
+                                    </div>
+                                </div>
+                                <div class="mock-card">
+                                    <i class="fas fa-broom"></i>
+                                    <div>
+                                        <strong>Limpeza e Conservação</strong>
+                                        <span>Match perfeito para o seu condomínio</span>
+                                    </div>
+                                </div>
+                                <div class="mock-card">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <div>
+                                        <strong>Engenharia Preventiva</strong>
+                                        <span>Vistorias e laudos técnicos urgentes</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -823,10 +872,10 @@
                 </div>
             </div>
         </section>
-    
+
     </main>
 
-   <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-content">

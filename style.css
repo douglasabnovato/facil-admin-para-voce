@@ -281,21 +281,42 @@ header .container {
     color: #cbd5e1 !important;
 }
 
-/* MOCKUP DASHBOARD WIDGET */
-.dashboard-widget {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    backdrop-filter: blur(8px);
+/* Estilos para a Imagem Hero Humanizada */
+.hero-human-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    /* Bordas bem arredondadas */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    /* Sombra proeminente */
+    display: block;
+    transform: rotate(2deg) scale(1.02);
+    /* Leve inclinação e zoom para dinamismo */
+    transition: transform 0.3s ease-in-out;
 }
 
-.widget-header {
+.hero-human-img:hover {
+    transform: rotate(0deg) scale(1);
+    /* Retorna ao normal ao passar o mouse */
+}
+
+.hero-visual {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    padding: 2rem;
+}
+
+/* Ajuste para mobile: garanta que a imagem não fique muito grande */
+@media (max-width: 768px) {
+    .hero-visual {
+        margin-top: 2rem;
+    }
+
+    .hero-human-img {
+        transform: rotate(0deg) scale(1);
+        max-width: 90%;
+    }
 }
 
 .dots span {
@@ -535,7 +556,7 @@ header .container {
     }
 }
 
- /* ==========================================
+/* ==========================================
    ESTILIZAÇÃO REFINADA: DOBRA 3 (SEGMENTAÇÃO DE PERSONAS)
    ========================================== */
 .personas-section {
@@ -1141,6 +1162,80 @@ header .container {
 }
 
 /* ==========================================
+   NOVA SEÇÃO: USO REAL (GALERIA)
+   ========================================== */
+.uso-real-section {
+    padding: 6rem 0;
+    background-color: var(--bg-app);
+}
+
+.grid-4-cols.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.gallery-item {
+    background: var(--surface);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    /* Altura fixa para uniformidade */
+    object-fit: cover;
+    /* Garante que a imagem preencha sem distorcer */
+    display: block;
+}
+
+.gallery-caption {
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    background: var(--surface);
+    flex-grow: 1;
+}
+
+.gallery-caption strong {
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Responsividade da Galeria */
+@media (max-width: 992px) {
+    .grid-4-cols.gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-4-cols.gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .gallery-item img {
+        height: 300px;
+        /* Aumenta um pouco a imagem no mobile */
+    }
+}
+
+/* ==========================================
    INÍCIO SEÇÃO: PARCEIROS E BENEFÍCIOS
    ========================================== */
 .parceiros-autoridade-section {
@@ -1365,6 +1460,24 @@ header .container {
     font-size: 0.95rem;
     color: var(--text-main);
 }
+
+#velocidade .grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Divide o espaço perfeitamente em 50% para cada */
+    gap: 3rem;
+    /* Espaçamento harmonioso entre o texto e o widget */
+    align-items: center;
+}
+
+/* Responsividade: No mobile, empilha os elementos verticalmente */
+@media (max-width: 992px) {
+    #velocidade .grid-2-cols {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
 /* ==========================================
    ESTILIZAÇÃO REFINADA: DOBRA 6 (VELOCIDADE)
    ========================================== */
@@ -1384,7 +1497,7 @@ header .container {
     right: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(5,150,105,0.03) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(5, 150, 105, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
     border-radius: 50%;
     z-index: 0;
 }
@@ -1405,6 +1518,62 @@ header .container {
     letter-spacing: 0.05em;
     margin-bottom: 1.5rem;
     border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.velocidade-widget-wrapper{
+    padding-top:32px
+}
+
+/* MOCKUP DASHBOARD WIDGET */
+.dashboard-widget {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    backdrop-filter: blur(8px);
+}
+
+/* ==========================================
+   AJUSTE DO WIDGET REAPROVEITADO (TEMA CLARO)
+   ========================================== */
+.widget-light-theme {
+    background: var(--surface) !important;
+    border: 1.5px solid var(--border) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-radius: 20px;
+    padding: 24px;
+}
+
+/* Ajusta as cores internas para o tema claro */
+.widget-light-theme .dots span {
+    background: #cbd5e1;
+}
+
+.widget-light-theme .status-live {
+    color: var(--secondary-color);
+    /* Verde sucesso */
+    background: rgba(5, 150, 105, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.widget-light-theme .mock-card {
+    background: #f8fafc !important;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.widget-light-theme .mock-card:hover {
+    transform: translateX(4px);
+    border-color: var(--primary-blue);
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .check-list-vertical {
@@ -1471,15 +1640,23 @@ header .container {
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
     transform: skewX(-25deg);
     animation: shine 6s infinite;
 }
 
 @keyframes shine {
-    0% { left: -100%; }
-    20% { left: 200%; }
-    100% { left: 200%; }
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 200%;
+    }
+
+    100% {
+        left: 200%;
+    }
 }
 
 .dark-card h3 {
@@ -1533,6 +1710,9 @@ header .container {
     box-shadow: 0 15px 30px -5px rgba(5, 150, 105, 0.5);
 }
 
+/* ==========================================
+   FIM DOBRA 6  VELOCIDADE  E ESTILOS 
+   ========================================== */
 /* ==========================================
    ESTILIZAÇÃO REFINADA: DOBRA 7 (CONTATO)
    ========================================== */
@@ -1661,12 +1841,13 @@ header .container {
 }
 
 .modern-form input {
-    padding-left: 2.5rem; /* Espaço para o ícone */
+    padding-left: 2.5rem;
+    /* Espaço para o ícone */
 }
 
 /* Foco nos inputs muda a cor do ícone também */
-.modern-form input:focus + .input-icon,
-.modern-form input:focus ~ .input-icon {
+.modern-form input:focus+.input-icon,
+.modern-form input:focus~.input-icon {
     color: var(--primary-blue);
 }
 
@@ -1739,7 +1920,7 @@ header .container {
     margin-bottom: 1.5rem;
     background: white;
     border-radius: 50%;
-    box-shadow: 0 10px 15px -3px rgba(5,150,105,0.2);
+    box-shadow: 0 10px 15px -3px rgba(5, 150, 105, 0.2);
 }
 
 .feedback-content h3 {
@@ -1756,8 +1937,15 @@ header .container {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsividade específica para as dobras 6 e 7 */
@@ -1771,20 +1959,21 @@ header .container {
     .form-wrapper {
         padding: 2.5rem 1.5rem;
     }
-    
+
     .input-row {
         grid-template-columns: 1fr;
     }
-    
+
     .dark-card {
         padding: 2rem 1.5rem !important;
     }
-    
+
     .check-list-vertical li {
         font-size: 0.9rem;
         padding: 10px 15px;
     }
 }
+
 /* ==========================================
    FOOTER
    ========================================== */
@@ -1833,6 +2022,7 @@ footer {
 }
 
 @media (max-width: 1024px) {
+
     .deals-banner-grid,
     .top-categories-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1848,6 +2038,7 @@ footer {
 }
 
 @media (max-width: 992px) {
+
     .hero-grid,
     .grid-2-cols {
         grid-template-columns: 1fr;
