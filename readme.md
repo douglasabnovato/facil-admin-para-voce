@@ -1,6 +1,8 @@
-# 🏢 FacilAdmin Para Você | Matching de Facilities e Serviços Condominiais
+# 🏢 Facil Admin Para Você 
 
-Plataforma oficial de matching e conexão entre síndicos/condomínios e fornecedores/prestadores de serviços especializados no setor de facilities. Desenvolvida com foco em alta conversão, design moderno e experiência de usuário fluida.
+Plataforma oficial de matching e conexão entre síndicos/condomínios e fornecedores/prestadores de serviços especializados no setor de facilities. 
+
+Desenvolvida com foco em alta conversão, design moderno e experiência de usuário fluida.
 
 ---
 
@@ -59,3 +61,5 @@ O layout conta com Media Queries rigorosas otimizadas para breakpoints em dispos
 
 ## 📄 Licença
 Desenvolvido por LearnTECH & FacilAdmin © 2026. Todos os direitos reservados.
+
+*feito por LearnTECH*
