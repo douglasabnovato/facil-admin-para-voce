@@ -5,7 +5,7 @@
     --primary-blue: #002F87;
     /* Azul Royal Vibrante (Referência Carrefour) */
     --primary-hover: #001f5c;
-    --secondary-color: #059669;
+    --secondary-color: #047857;
     /* Verde Esmeralda de Conversão / Sucesso */
     --accent-red: #CC0000;
     /* Vermelho Institucional de Destaque */
@@ -2134,4 +2134,127 @@ footer {
         text-align: center;
         gap: 1.25rem;
     }
+}
+/* ==========================================================================
+   ACESSIBILIDADE, FORMULÁRIO E ESTADOS (ciclo MVP 27/09/2026)
+   ========================================================================== */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 1000;
+  background: #002f87;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+header.scrolled {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08);
+}
+
+.field-error,
+.form-status {
+  color: #b91c1c;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.field-error:empty,
+.form-status:empty {
+  display: none;
+}
+
+[aria-invalid="true"] {
+  border-color: #b91c1c !important;
+}
+
+.form-privacy {
+  font-size: 0.8rem;
+  color: #475569;
+  margin: 0.5rem 0;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-feedback[hidden],
+form[hidden] {
+  display: none !important;
+}
+
+.social-pending {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+/* Contraste AA (WCAG 1.4.3): cores de destaque escurecidas mantendo a identidade */
+.deal-card-coral {
+  background: #b93d00 !important;
+}
+
+.badge-tag.bestseller {
+  background-color: #a15c07;
+}
+
+.preco-antigo,
+.preco-mini del {
+  color: #64748b !important;
+}
+
+/* fim de style.css */
+
+/* L1 — avisos de conteúdo ilustrativo (pré-lançamento) */
+.faixa-pre-lancamento {
+    background: #fff7ed;
+    color: #7c2d12;
+    border-bottom: 1px solid #fed7aa;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 86px;
+}
+
+.faixa-pre-lancamento + .hero-section {
+    padding-top: 56px;
+}
+
+.aviso-ilustrativo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: #fff7ed;
+    color: #7c2d12;
+    font-size: 0.8rem;
+    font-weight: 500;
 }

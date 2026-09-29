@@ -35,8 +35,8 @@ Abaixo está o mapeamento completo e ordenado das seções presentes na arquitet
 5. **Seção de Plantão de Ofertas:** Faixas de oportunidades com destaques comerciais (plantão de manutenção, descontos em reformas) e vitrine circular de categorias com selos de desconto.
 6. **Seção de Serviços e Produtos Sob Medida:** Cards detalhados com seletores de métricas comerciais, contadores de quantidade dinâmicos e preços transparentes para pacotes recorrentes.
 7. **Seção de Destaques do Mercado Condominial:** Listas compactas organizadas em três frentes de valor: Mais Contratados, Tendências em Facilities e Fornecedores Recém-Chegados à rede.
-8. **Nova Seção de Galeria de Uso (Prova Social Visual):** Grid de quatro imagens contextuais humanizadas retratando usuários reais (síndicos, gestores e prestadores) operando o FacilAdmin em cenários cotidianos diversos (shopping, condomínio residencial, escritório e recepção).
-9. **Seção de Prova Social e Avaliações:** Depoimentos reais de gestores, síndicos profissionais e diretores de operações da rede integrados com notas máximas em estrelas.
+8. **Nova Seção de Galeria de Uso (Prova Social Visual):** Grid de quatro imagens contextuais humanizadas com imagens ilustrativas de síndicos, gestores e prestadores operando o FacilAdmin em cenários cotidianos diversos (shopping, condomínio residencial, escritório e recepção).
+9. **Seção de Prova Social e Avaliações:** Depoimentos de gestores, síndicos profissionais e diretores de operações da rede integrados com notas máximas em estrelas.
 10. **Dobra 5 (Como Funciona):** Linha do tempo dividida em 5 passos lógicos e intuitivos, cobrindo desde a inserção da demanda até a avaliação mútua e fechamento.
 11. **Dobra 6 (Diferencial de Velocidade):** Bloco focado em combater a lentidão e a burocracia do modelo tradicional de cotações, acompanhado de um widget interativo atualizado com 4 itens de matching em tempo real.
 12. **Dobra 7 (Conversão e Contato Imediato):** Formulário inteligente para submissão direta, integrado com validação de campos, seletor de perfil e feedback dinâmico de sucesso.
@@ -59,13 +59,13 @@ A organização de diretórios e arquivos foi planejada para manter o código li
 
 ```text
 FACIL-ADMIN-PARA-VOCE/
-├── assets/                          # Pasta contendo os recursos visuais da landing page
-│   ├── facil-admin-para-voce-1.png  # Imagem da síndica no condomínio (Usada nos cards de personas)
-│   ├── facil-admin-para-voce-2.png  # Imagem do empreendedor no shopping (Usada nos cards de personas)
-│   ├── facil-admin-para-voce-3.png  # Imagem do gestor no escritório (Usada na seção de velocidade)
-│   └── facil-admin-para-voce-4.png  # Imagem da administradora na recepção (Usada no Hero/Topo)
+├── assets/                          # Recursos visuais (WebP otimizado, 1000 px)
+│   ├── facil-admin-para-voce-1.webp # Síndica no condomínio
+│   ├── facil-admin-para-voce-2.webp # Empreendedor no shopping
+│   ├── facil-admin-para-voce-3.webp # Gestor no escritório
+│   └── facil-admin-para-voce-4.webp # Administradora na recepção (hero)
 ├── .nojekyll                        # Arquivo vazio essencial que desativa o processador Jekyll do GitHub Pages
-├── deploy.yml                       # Arquivo de configuração do GitHub Actions para o deploy automatizado
+├── docs/                            # Análise, arquitetura e plano de ação do MVP
 ├── index.html                       # Arquivo principal contendo todas as dobras e a semântica da página
 ├── readme.md                        # Documentação completa e estruturada do projeto
 ├── script.js                        # Controladores lógicos, menu mobile e submissão assíncrona
@@ -90,3 +90,32 @@ A concepção visual e estrutural da landing page seguiu premissas rigorosas de 
 Desenvolvido por LearnTECH & FacilAdmin © 2026. Todos os direitos reservados.
 
 *feito por LearnTECH*
+
+---
+
+## ⚠️ Conteúdo ilustrativo (L1 — set/2026)
+
+A plataforma está em pré-lançamento. Preços, selos, avaliações, depoimentos e números da página são **exemplos** e estão sinalizados na própria página (faixa no topo e avisos por seção). A seção de marcas foi trocada pelas categorias da rede em formação: nenhuma marca de terceiros é exibida.
+
+## 🌐 Em produção
+
+**Demonstração:** https://douglasabnovato.github.io/facil-admin-para-voce/
+
+- GitHub Pages publicando a branch `main` (pasta raiz), sem build e sem workflow; `.nojekyll` desliga o Jekyll.
+- O formulário envia pelo Formspree (campos ocultos `origem` e `_subject` identificam este site).
+- Passo a passo completo: [docs/DEPLOY.md](docs/DEPLOY.md).
+
+## 📊 Estado do MVP & Documentação
+
+| Documento | Conteúdo |
+|---|---|
+| [docs/ANALISE.md](./docs/ANALISE.md) | Requisitos, diagnóstico, rubrica e notas |
+| [docs/ARQUITETURA.md](./docs/ARQUITETURA.md) | C4, contrato do lead e ADRs |
+| [docs/PLANO-DE-ACAO.md](./docs/PLANO-DE-ACAO.md) | Tarefas priorizadas por MoSCoW |
+
+| Momento | Nota MVP | Situação |
+|---|---|---|
+| Antes (27/09/2026) | 4,01 | Reprovado — 13,7 MB de imagens, controles sem ação e publicação automática inativa |
+| Depois (27/09/2026) | 7,84 | Aprovado — faltam mover o workflow e decidir como rotular preços e avaliações |
+
+> **Publicação:** GitHub Pages direto da branch `main`, pasta raiz, sem workflow. Passo a passo em [docs/DEPLOY.md](docs/DEPLOY.md).

@@ -1,34 +1,46 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FacilAdmin Para Você | Matching de Facilities e Serviços Condominiais</title>
+    <meta name="description" content="Conecte seu condomínio a fornecedores de manutenção, limpeza, portaria e engenharia. Peça cotações em poucos minutos ou cadastre sua empresa." />
+    <meta name="theme-color" content="#002f87" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FacilAdmin Para Você | Matching de Facilities" />
+    <meta property="og:description" content="Cotações rápidas entre condomínios e fornecedores de facilities." />
+    <meta property="og:image" content="https://douglasabnovato.github.io/facil-admin-para-voce/assets/facil-admin-para-voce-4.webp" />
+    <meta property="og:url" content="https://douglasabnovato.github.io/facil-admin-para-voce/" />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
     <!-- HEADER -->
     <header>
         <div class="container">
-            <a href="#" class="logo">Facil<span>Admin</span> <small>Para Você</small></a>
-            <nav class="nav-menu">
+            <a href="#hero" class="logo" aria-label="FacilAdmin Para Você, início">Facil<span>Admin</span> <small>Para Você</small></a>
+            <nav class="nav-menu" id="menu-principal" aria-label="Menu principal">
                 <a href="#categorias">Categorias</a>
                 <a href="#personas">Para Quem é</a>
                 <a href="#como-funciona">Como Funciona</a>
                 <a href="#depoimentos">Avaliações</a>
                 <a href="#contato" class="btn btn-primary">Fazer Cotação Rápida</a>
             </nav>
-            <button class="hamburger-menu" aria-label="Abrir Menu">
-                <i class="fas fa-bars"></i>
+            <button type="button" class="hamburger-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
     </header>
 
-    <main>
+    <main id="conteudo">
+        <div class="faixa-pre-lancamento" role="note">Plataforma em pré-lançamento: preços, selos, avaliações, depoimentos e números desta página são <strong>ilustrativos</strong> e mostram como a plataforma vai funcionar.</div>
         <!-- DOBRA 1: HERO SECTION -->
         <section id="hero" class="hero-section">
             <div class="container hero-grid">
@@ -52,8 +64,8 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-img-wrapper">
-                        <img src="./assets/facil-admin-para-voce-4.png"
-                            alt="Administradora comercial utilizando FacilAdmin na recepção" class="hero-human-img">
+                        <img src="./assets/facil-admin-para-voce-4.webp"
+                            alt="Administradora comercial utilizando FacilAdmin na recepção" class="hero-human-img" width="1000" height="808" fetchpriority="high" decoding="async">
                     </div>
                 </div>
             </div>
@@ -68,34 +80,34 @@
                 </div>
                 <div class="grid-cards-azul">
                     <div class="card-azul">
-                        <div class="card-azul-icon"><i class="fas fa-tools"></i></div>
+                        <div class="card-azul-icon"><i class="fas fa-tools" aria-hidden="true"></i></div>
                         <h3>Manutenção Predial</h3>
                         <p>Elétrica, hidráulica, manutenções preventivas e laudos técnicos urgentes.</p>
-                        <a href="#contato" class="card-azul-link">Ver Opções <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contato" class="card-azul-link">Ver Opções <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                     <div class="card-azul">
-                        <div class="card-azul-icon"><i class="fas fa-broom"></i></div>
+                        <div class="card-azul-icon"><i class="fas fa-broom" aria-hidden="true"></i></div>
                         <h3>Limpeza & Conservação</h3>
                         <p>Equipes treinadas, insumos profissionais e limpeza de pós-obra.</p>
-                        <a href="#contato" class="card-azul-link">Ver Opções <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contato" class="card-azul-link">Ver Opções <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                     <div class="card-azul">
-                        <div class="card-azul-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="card-azul-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
                         <h3>Portaria & CFTV</h3>
                         <p>Segurança eletrônica inteligente, portaria remota e controle de acesso.</p>
-                        <a href="#contato" class="card-azul-link">Ver Opções <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contato" class="card-azul-link">Ver Opções <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                     <div class="card-azul">
-                        <div class="card-azul-icon"><i class="fas fa-hard-hat"></i></div>
+                        <div class="card-azul-icon"><i class="fas fa-hard-hat" aria-hidden="true"></i></div>
                         <h3>Engenharia Preventiva</h3>
                         <p>Vistorias estruturais, reformas de fachada e cronogramas de conservação.</p>
-                        <a href="#contato" class="card-azul-link">Ver Opções <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contato" class="card-azul-link">Ver Opções <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="sub-categories-wrapper">
                     <span class="sub-categories-label">Busca Rápida por Setor:</span>
                     <div class="sub-categories-bar">
-                        <a href="#contato" class="sub-cat-item"><i class="fas fa-fire-extinguisher"></i><span>Combate a
+                        <a href="#contato" class="sub-cat-item"><i class="fas fa-fire-extinguisher" aria-hidden="true"></i><span>Combate a
                                 Incêndio</span></a>
                         <a href="#contato" class="sub-cat-item"><i
                                 class="fas fa-tint"></i><span>Impermeabilização</span></a>
@@ -121,14 +133,14 @@
                     <!-- Card Condomínios e Síndicos -->
                     <div class="card persona-card persona-condominio">
                         <div class="persona-header-badge">Para Gestores</div>
-                        <div class="card-icon"><i class="fas fa-building"></i></div>
+                        <div class="card-icon"><i class="fas fa-building" aria-hidden="true"></i></div>
                         <h3>Condomínios e Síndicos</h3>
                         <p>Precisa de produtos ou serviços? Encontre fornecedores homologados, avaliados pelo mercado e
                             prontos para atender seu condomínio com total segurança e preços justos.</p>
                         <ul class="persona-features">
-                            <li><i class="fas fa-check"></i> Cotações rápidas e sem burocracia</li>
-                            <li><i class="fas fa-check"></i> Fornecedores com reputação validada</li>
-                            <li><i class="fas fa-check"></i> Economia real para o orçamento predial</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Cotações rápidas e sem burocracia</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Fornecedores com reputação validada</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Economia real para o orçamento predial</li>
                         </ul>
                         <a href="#contato" class="btn btn-primary">Buscar Fornecedores Agora <i
                                 class="fas fa-arrow-right"></i></a>
@@ -137,14 +149,14 @@
                     <!-- Card Fornecedores e Prestadores -->
                     <div class="card persona-card persona-fornecedor">
                         <div class="persona-header-badge">Para Empresas</div>
-                        <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="card-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
                         <h3>Fornecedores e Prestadores</h3>
-                        <p>Tem uma empresa ou presta serviços? Exponha seu negócio para centenas de condomínios ativos,
+                        <p>Tem uma empresa ou presta serviços? Exponha seu negócio para os condomínios da sua região,
                             receba demandas qualificadas e feche contratos recorrentes.</p>
                         <ul class="persona-features">
-                            <li><i class="fas fa-check"></i> Leads ultra qualificados na sua região</li>
-                            <li><i class="fas fa-check"></i> Vitrine digital de alta conversão</li>
-                            <li><i class="fas fa-check"></i> Previsibilidade e contratos recorrentes</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Leads ultra qualificados na sua região</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Vitrine digital de alta conversão</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Previsibilidade e contratos recorrentes</li>
                         </ul>
                         <a href="#contato" class="btn btn-secondary">Cadastrar Minha Empresa <i
                                 class="fas fa-arrow-right"></i></a>
@@ -159,6 +171,7 @@
                 <div class="section-header">
                     <h2>Plantão de Oportunidades & Facilities</h2>
                     <p>Soluções em destaque e serviços essenciais para condomínios residenciais e comerciais.</p>
+                    <p class="aviso-ilustrativo" role="note"><i class="fas fa-info-circle" aria-hidden="true"></i> Condições e descontos de exemplo.</p>
                 </div>
 
                 <!-- Faixa Superior de Ofertas / Banners de Topo -->
@@ -189,16 +202,16 @@
                 <div class="top-categories-grid">
                     <div class="top-cat-item">
                         <div class="cat-circle-img">
-                            <i class="fas fa-bolt" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                            <i class="fas fa-bolt" style="font-size: 2rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
-                        <span class="discount-badge-pill">ATÉ 20% OFF</span>
+                        <span class="discount-badge-pill">EXEMPLO: ATÉ 20% OFF</span>
                         <h3>Manutenção Elétrica</h3>
                         <p>Prevenção e quadros de força</p>
                     </div>
 
                     <div class="top-cat-item">
                         <div class="cat-circle-img">
-                            <i class="fas fa-water" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                            <i class="fas fa-water" style="font-size: 2rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
                         <span class="discount-badge-pill">PLANTÃO 24H</span>
                         <h3>Hidráulica Preventiva</h3>
@@ -207,27 +220,27 @@
 
                     <div class="top-cat-item">
                         <div class="cat-circle-img">
-                            <i class="fas fa-broom" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                            <i class="fas fa-broom" style="font-size: 2rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
-                        <span class="discount-badge-pill">ATÉ 30% OFF</span>
+                        <span class="discount-badge-pill">EXEMPLO: ATÉ 30% OFF</span>
                         <h3>Limpeza & Conservação</h3>
                         <p>Equipes e insumos profissionais</p>
                     </div>
 
                     <div class="top-cat-item">
                         <div class="cat-circle-img">
-                            <i class="fas fa-hammer" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                            <i class="fas fa-hammer" style="font-size: 2rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
-                        <span class="discount-badge-pill">ECONOMIA GARANTIDA</span>
+                        <span class="discount-badge-pill">ECONOMIA</span>
                         <h3>Reformas de Áreas Comuns</h3>
                         <p>Pintura, pisos e fachada</p>
                     </div>
 
                     <div class="top-cat-item">
                         <div class="cat-circle-img">
-                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
-                        <span class="discount-badge-pill">HOMOLOGADO</span>
+                        <span class="discount-badge-pill">HOMOLOGAÇÃO</span>
                         <h3>Portaria & CFTV</h3>
                         <p>Segurança eletrônica inteligente</p>
                     </div>
@@ -242,6 +255,7 @@
                     <h2>Pacotes, Insumos e Contratos Sob Medida</h2>
                     <p>Selecione serviços recorrentes e produtos para o seu condomínio com transparência de preços e
                         quantidade.</p>
+                    <p class="aviso-ilustrativo" role="note"><i class="fas fa-info-circle" aria-hidden="true"></i> Preços de exemplo. O valor real vem das propostas dos fornecedores.</p>
                 </div>
 
                 <div class="produtos-grid">
@@ -249,14 +263,14 @@
                     <div class="produto-card">
                         <div class="badge-tag bestseller">Mais Contratado</div>
                         <div class="produto-img-wrapper">
-                            <i class="fas fa-tools" style="font-size: 2.5rem; color: var(--primary-blue);"></i>
+                            <i class="fas fa-tools" style="font-size: 2.5rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
                         <div class="produto-info">
                             <h3>Kit Manutenção de Motores de Recalque</h3>
                             <p class="produto-desc">Revisão preventiva completa de bombas e painéis elétricos.</p>
                             <div class="unidade-selector">
-                                <label>Métrica:</label>
-                                <select class="select-metrica">
+                                <label for="metrica-1">Métrica:</label>
+                                <select class="select-metrica" id="metrica-1">
                                     <option value="mes">1 Mês (Contrato)</option>
                                     <option value="visita">Por Visita Técnica</option>
                                 </select>
@@ -266,11 +280,11 @@
                             </div>
                             <div class="card-footer-action">
                                 <div class="quantidade-box">
-                                    <button class="qty-btn" type="button">-</button>
-                                    <span>1</span>
-                                    <button class="qty-btn" type="button">+</button>
+                                    <button class="qty-btn" type="button" data-step="-1" aria-label="Diminuir quantidade">-</button>
+                                    <span class="qty-value" aria-live="polite">1</span>
+                                    <button class="qty-btn" type="button" data-step="1" aria-label="Aumentar quantidade">+</button>
                                 </div>
-                                <a href="#contato" class="btn btn-primary btn-sm">Solicitar Orçamento</a>
+                                <a href="#contato" class="btn btn-primary btn-sm js-orcamento">Solicitar Orçamento</a>
                             </div>
                         </div>
                     </div>
@@ -279,14 +293,14 @@
                     <div class="produto-card">
                         <div class="badge-tag supersaver">Preço Fechado</div>
                         <div class="produto-img-wrapper">
-                            <i class="fas fa-pump-soap" style="font-size: 2.5rem; color: var(--primary-blue);"></i>
+                            <i class="fas fa-pump-soap" style="font-size: 2.5rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
                         <div class="produto-info">
                             <h3>Insumos de Limpeza Profissional (Kit Mensal)</h3>
                             <p class="produto-desc">Produtos químicos industriais para áreas comuns e portaria.</p>
                             <div class="unidade-selector">
-                                <label>Métrica:</label>
-                                <select class="select-metrica">
+                                <label for="metrica-2">Métrica:</label>
+                                <select class="select-metrica" id="metrica-2">
                                     <option value="kit">1 Kit Completo</option>
                                     <option value="lote">Lote Bimestral</option>
                                 </select>
@@ -296,11 +310,11 @@
                             </div>
                             <div class="card-footer-action">
                                 <div class="quantidade-box">
-                                    <button class="qty-btn" type="button">-</button>
-                                    <span>1</span>
-                                    <button class="qty-btn" type="button">+</button>
+                                    <button class="qty-btn" type="button" data-step="-1" aria-label="Diminuir quantidade">-</button>
+                                    <span class="qty-value" aria-live="polite">1</span>
+                                    <button class="qty-btn" type="button" data-step="1" aria-label="Aumentar quantidade">+</button>
                                 </div>
-                                <a href="#contato" class="btn btn-primary btn-sm">Solicitar Orçamento</a>
+                                <a href="#contato" class="btn btn-primary btn-sm js-orcamento">Solicitar Orçamento</a>
                             </div>
                         </div>
                     </div>
@@ -310,14 +324,14 @@
                         <div class="badge-tag bestseller">Recomendado</div>
                         <div class="produto-img-wrapper">
                             <i class="fas fa-fire-extinguisher"
-                                style="font-size: 2.5rem; color: var(--primary-blue);"></i>
+                                style="font-size: 2.5rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
                         <div class="produto-info">
                             <h3>Recarga e Laudo de Extintores (Lote)</h3>
                             <p class="produto-desc">Serviço certificado pelo Corpo de Bombeiros com recolhimento.</p>
                             <div class="unidade-selector">
-                                <label>Métrica:</label>
-                                <select class="select-metrica">
+                                <label for="metrica-3">Métrica:</label>
+                                <select class="select-metrica" id="metrica-3">
                                     <option value="lote">Lote até 20un</option>
                                     <option value="unidade">Por Unidade</option>
                                 </select>
@@ -327,11 +341,11 @@
                             </div>
                             <div class="card-footer-action">
                                 <div class="quantidade-box">
-                                    <button class="qty-btn" type="button">-</button>
-                                    <span>1</span>
-                                    <button class="qty-btn" type="button">+</button>
+                                    <button class="qty-btn" type="button" data-step="-1" aria-label="Diminuir quantidade">-</button>
+                                    <span class="qty-value" aria-live="polite">1</span>
+                                    <button class="qty-btn" type="button" data-step="1" aria-label="Aumentar quantidade">+</button>
                                 </div>
-                                <a href="#contato" class="btn btn-primary btn-sm">Solicitar Orçamento</a>
+                                <a href="#contato" class="btn btn-primary btn-sm js-orcamento">Solicitar Orçamento</a>
                             </div>
                         </div>
                     </div>
@@ -340,14 +354,14 @@
                     <div class="produto-card">
                         <div class="badge-tag off">Desconto Especial</div>
                         <div class="produto-img-wrapper">
-                            <i class="fas fa-seedling" style="font-size: 2.5rem; color: var(--primary-blue);"></i>
+                            <i class="fas fa-seedling" style="font-size: 2.5rem; color: var(--primary-blue);" aria-hidden="true"></i>
                         </div>
                         <div class="produto-info">
                             <h3>Jardinagem e Paisagismo de Áreas Comuns</h3>
                             <p class="produto-desc">Manutenção semanal de gramados, podas e limpeza de canteiros.</p>
                             <div class="unidade-selector">
-                                <label>Métrica:</label>
-                                <select class="select-metrica">
+                                <label for="metrica-4">Métrica:</label>
+                                <select class="select-metrica" id="metrica-4">
                                     <option value="mensal">Plano Mensal (4 Visitas)</option>
                                     <option value="quinzenal">Plano Quinzenal</option>
                                 </select>
@@ -358,11 +372,11 @@
                             </div>
                             <div class="card-footer-action">
                                 <div class="quantidade-box">
-                                    <button class="qty-btn" type="button">-</button>
-                                    <span>1</span>
-                                    <button class="qty-btn" type="button">+</button>
+                                    <button class="qty-btn" type="button" data-step="-1" aria-label="Diminuir quantidade">-</button>
+                                    <span class="qty-value" aria-live="polite">1</span>
+                                    <button class="qty-btn" type="button" data-step="1" aria-label="Aumentar quantidade">+</button>
                                 </div>
-                                <a href="#contato" class="btn btn-primary btn-sm">Solicitar Orçamento</a>
+                                <a href="#contato" class="btn btn-primary btn-sm js-orcamento">Solicitar Orçamento</a>
                             </div>
                         </div>
                     </div>
@@ -377,6 +391,7 @@
                     <h2>Destaques do Mercado Condominial</h2>
                     <p>Explore as opções mais buscadas, as novas tendências de tecnologia e os fornecedores que acabaram
                         de chegar à rede.</p>
+                    <p class="aviso-ilustrativo" role="note"><i class="fas fa-info-circle" aria-hidden="true"></i> Itens, preços e avaliações de exemplo.</p>
                 </div>
 
                 <div class="grid-3-cols">
@@ -391,30 +406,30 @@
                         </div>
                         <div class="lista-itens-compactos">
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-tools"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-tools" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>Manutenção Elétrica Preventiva</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 1.800,00</span>
                                 </div>
                                 <a href="#contato" class="btn-mini-add" title="Contratar"><i
                                         class="fas fa-plus"></i></a>
                             </div>
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-pump-soap"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-pump-soap" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>Kit Insumos Limpeza Mensal</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 2.800,00</span>
                                 </div>
                                 <a href="#contato" class="btn-mini-add" title="Contratar"><i
                                         class="fas fa-plus"></i></a>
                             </div>
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-water"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-water" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>Higienização de Reservatórios</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 1.200,00</span>
                                 </div>
                                 <a href="#contato" class="btn-mini-add" title="Contratar"><i
@@ -434,30 +449,30 @@
                         </div>
                         <div class="lista-itens-compactos">
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-shield-alt"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>Portaria Remota Inteligente</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 3.500,00</span>
                                 </div>
                                 <a href="#contato" class="btn-mini-add" title="Contratar"><i
                                         class="fas fa-plus"></i></a>
                             </div>
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-solar-panel"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-solar-panel" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>Auditoria de Energia Solar</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 2.500,00</span>
                                 </div>
                                 <a href="#contato" class="btn-mini-add" title="Contratar"><i
                                         class="fas fa-plus"></i></a>
                             </div>
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-video"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-video" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>CFTV com Reconhecimento Facial</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 4.200,00</span>
                                 </div>
                                 <a href="#contato" class="btn-mini-add" title="Contratar"><i
@@ -477,10 +492,10 @@
                         </div>
                         <div class="lista-itens-compactos">
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-paint-roller"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-paint-roller" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>Pintura de Fachadas e Garagens</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 5.000,00 <del
                                             style="color:#94a3b8; font-size:0.75rem;">R$ 6.500</del></span>
                                 </div>
@@ -488,20 +503,20 @@
                                         class="fas fa-plus"></i></a>
                             </div>
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-seedling"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-seedling" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>Paisagismo e Irrigação Automática</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 1.900,00</span>
                                 </div>
                                 <a href="#contato" class="btn-mini-add" title="Contratar"><i
                                         class="fas fa-plus"></i></a>
                             </div>
                             <div class="item-compacto">
-                                <div class="mini-img-box"><i class="fas fa-door-open"></i></div>
+                                <div class="mini-img-box"><i class="fas fa-door-open" aria-hidden="true"></i></div>
                                 <div class="item-info">
                                     <h4>Manutenção de Portões Automáticos</h4>
-                                    <div class="stars-mini">★★★★★</div>
+                                    <div class="stars-mini" role="img" aria-label="Avaliação ilustrativa 5 de 5">★★★★★</div>
                                     <span class="preco-mini">R$ 950,00 <del style="color:#94a3b8; font-size:0.75rem;">R$
                                             1.300</del></span>
                                 </div>
@@ -527,32 +542,32 @@
                 <div class="grid-4-cols gallery-grid">
                     <!-- Imagem 1: Shopping -->
                     <div class="gallery-item">
-                        <img src="./assets/facil-admin-para-voce-2.png"
-                            alt="Jovem empreendedor utilizando FacilAdmin no Shopping" loading="lazy">
+                        <img src="./assets/facil-admin-para-voce-2.webp"
+                            alt="Jovem empreendedor utilizando FacilAdmin no Shopping" width="1000" height="627" loading="lazy" decoding="async">
                         <div class="gallery-caption"><strong>Dinamismo Urbano:</strong> Cotações rápidas entre reuniões
                             no shopping.</div>
                     </div>
 
                     <!-- Imagem 2: Condomínio Residencial -->
                     <div class="gallery-item">
-                        <img src="./assets/facil-admin-para-voce-1.png"
-                            alt="Síndica profissional gerenciando facilities no condomínio" loading="lazy">
+                        <img src="./assets/facil-admin-para-voce-1.webp"
+                            alt="Síndica profissional gerenciando facilities no condomínio" width="1000" height="786" loading="lazy" decoding="async">
                         <div class="gallery-caption"><strong>Gestão no Local:</strong> Síndica aprova manutenção direto
                             da varanda do prédio.</div>
                     </div>
 
                     <!-- Imagem 3: Escritório -->
                     <div class="gallery-item">
-                        <img src="./assets/facil-admin-para-voce-3.png"
-                            alt="Gestor de operações utilizando FacilAdmin no escritório" loading="lazy">
+                        <img src="./assets/facil-admin-para-voce-3.webp"
+                            alt="Gestor de operações utilizando FacilAdmin no escritório" width="1000" height="667" loading="lazy" decoding="async">
                         <div class="gallery-caption"><strong>Eficiência Corporativa:</strong> Gestor otimiza operações
                             sem sair da mesa.</div>
                     </div>
 
                     <!-- Imagem 4: Recepção Comercial -->
                     <div class="gallery-item">
-                        <img src="./assets/facil-admin-para-voce-4.png"
-                            alt="Administradora de condomínio comercial utilizando FacilAdmin" loading="lazy">
+                        <img src="./assets/facil-admin-para-voce-4.webp"
+                            alt="Administradora de condomínio comercial utilizando FacilAdmin" width="1000" height="808" loading="lazy" decoding="async">
                         <div class="gallery-caption"><strong>Comodidade e Controle:</strong> Administradora garante
                             agilidade na recepção.</div>
                     </div>
@@ -564,14 +579,14 @@
         <section class="parceiros-autoridade-section">
             <div class="container">
                 <div class="parceiros-header-wrapper">
-                    <p>Ecossistema integrado com marcas e fornecedores de referência no mercado</p>
+                    <p>Rede em formação: categorias que estamos cadastrando agora</p>
                     <div class="marcos-logos-grid">
-                        <span class="logo-text-mock">Kellogg's</span>
-                        <span class="logo-text-mock">Kroger</span>
-                        <span class="logo-text-mock">Wegmans</span>
-                        <span class="logo-text-mock">Nestlé</span>
-                        <span class="logo-text-mock">Dabur</span>
-                        <span class="logo-text-mock">Unilever</span>
+                        <span class="logo-text-mock">Manutenção elétrica</span>
+                        <span class="logo-text-mock">Hidráulica</span>
+                        <span class="logo-text-mock">Limpeza</span>
+                        <span class="logo-text-mock">Portaria &amp; CFTV</span>
+                        <span class="logo-text-mock">Engenharia</span>
+                        <span class="logo-text-mock">Paisagismo</span>
                     </div>
                 </div>
 
@@ -601,17 +616,15 @@
 
                 <div class="section-header" style="margin-top: 4rem;">
                     <h2>O que dizem os gestores da rede</h2>
-                    <p>Histórias reais de quem transformou a rotina predial com a nossa plataforma.</p>
+                    <p>O que queremos que síndicos, administradoras e fornecedores digam da plataforma.</p>
+                    <p class="aviso-ilustrativo" role="note"><i class="fas fa-info-circle" aria-hidden="true"></i> Depoimentos ilustrativos: não são clientes reais.</p>
                 </div>
 
                 <!-- PROVA SOCIAL / DEPOIMENTOS (5 Cards / 2 por linha) -->
                 <div id="depoimentos" class="grid-depoimentos-2cols">
                     <!-- Depoimento 1 -->
                     <div class="card card-depoimento-v4">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+                        <div class="stars" role="img" aria-label="Avaliação ilustrativa 5 de 5"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i></div>
                         <p>"Conseguimos fechar contratos de manutenção preventiva em menos de 48 horas com fornecedores
                             altamente avaliados. Economia e segurança reais!"</p>
                         <div class="user-info">
@@ -622,10 +635,7 @@
 
                     <!-- Depoimento 2 -->
                     <div class="card card-depoimento-v4">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+                        <div class="stars" role="img" aria-label="Avaliação ilustrativa 5 de 5"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i></div>
                         <p>"Nossa empresa de facilities dobrou o número de condomínios atendidos após entrar na rede de
                             matching do FacilAdmin. Leads super qualificados."</p>
                         <div class="user-info">
@@ -636,10 +646,7 @@
 
                     <!-- Depoimento 3 -->
                     <div class="card card-depoimento-v4">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+                        <div class="stars" role="img" aria-label="Avaliação ilustrativa 5 de 5"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i></div>
                         <p>"A agilidade para encontrar prestadores para urgências hidráulicas salvou nosso orçamento
                             trimestral. Plataforma indispensável."</p>
                         <div class="user-info">
@@ -650,10 +657,7 @@
 
                     <!-- Depoimento 4 -->
                     <div class="card card-depoimento-v4">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+                        <div class="stars" role="img" aria-label="Avaliação ilustrativa 5 de 5"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i></div>
                         <p>"Contratar serviços de hidráulica e portaria remota nunca foi tão simples. A plataforma
                             entrega exatamente o que promete com muita agilidade."</p>
                         <div class="user-info">
@@ -664,10 +668,7 @@
 
                     <!-- Depoimento 5 (Destaque Centralizado) -->
                     <div class="card card-depoimento-v4 card-destaque-centro">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+                        <div class="stars" role="img" aria-label="Avaliação ilustrativa 5 de 5"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i></div>
                         <p>"Nossa administradora padronizou todas as concorrências de facilities através da rede. O
                             ganho de tempo para a equipe e a segurança jurídica foram totais."</p>
                         <div class="user-info">
@@ -737,17 +738,17 @@
                         <ul class="check-list-vertical">
                             <li>
                                 <div class="check-icon"><i class="fas fa-check"
-                                        style="color: var(--secondary-color);"></i></div>
+                                        style="color: var(--secondary-color);" aria-hidden="true"></i></div>
                                 <span>Eliminação de intermediários lentos</span>
                             </li>
                             <li>
                                 <div class="check-icon"><i class="fas fa-check"
-                                        style="color: var(--secondary-color);"></i></div>
+                                        style="color: var(--secondary-color);" aria-hidden="true"></i></div>
                                 <span>Cotações padronizadas e comparáveis</span>
                             </li>
                             <li>
                                 <div class="check-icon"><i class="fas fa-check"
-                                        style="color: var(--secondary-color);"></i></div>
+                                        style="color: var(--secondary-color);" aria-hidden="true"></i></div>
                                 <span>Resposta comercial em até 24 horas</span>
                             </li>
                         </ul>
@@ -758,32 +759,32 @@
                         <div class="dashboard-widget widget-light-theme">
                             <div class="widget-header">
                                 <div class="dots"><span></span><span></span><span></span></div>
-                                <span class="status-live">LIVE: Matching em Tempo Real</span>
+                                <span class="status-live">Simulação: Matching em Tempo Real</span>
                             </div>
                             <div class="widget-body-mock">
                                 <div class="mock-card">
-                                    <i class="fas fa-tools"></i>
+                                    <i class="fas fa-tools" aria-hidden="true"></i>
                                     <div>
                                         <strong>Manutenção Preventiva</strong>
-                                        <span>3 propostas recebidas em 24h</span>
+                                        <span>Meta: 3 propostas em até 24h</span>
                                     </div>
                                 </div>
                                 <div class="mock-card">
-                                    <i class="fas fa-shield-alt"></i>
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
                                     <div>
                                         <strong>Portaria & Segurança</strong>
                                         <span>Fornecedores homologados e avaliados</span>
                                     </div>
                                 </div>
                                 <div class="mock-card">
-                                    <i class="fas fa-broom"></i>
+                                    <i class="fas fa-broom" aria-hidden="true"></i>
                                     <div>
                                         <strong>Limpeza e Conservação</strong>
                                         <span>Match perfeito para o seu condomínio</span>
                                     </div>
                                 </div>
                                 <div class="mock-card">
-                                    <i class="fas fa-hard-hat"></i>
+                                    <i class="fas fa-hard-hat" aria-hidden="true"></i>
                                     <div>
                                         <strong>Engenharia Preventiva</strong>
                                         <span>Vistorias e laudos técnicos urgentes</span>
@@ -801,72 +802,80 @@
             <div class="container">
                 <div class="form-wrapper">
                     <div class="form-header-content">
-                        <div class="form-icon-top"><i class="fas fa-paper-plane"></i></div>
+                        <div class="form-icon-top"><i class="fas fa-paper-plane" aria-hidden="true"></i></div>
                         <h2>Precisa de Cotações ou Quer Cadastrar sua Empresa?</h2>
                         <p>Preencha os campos abaixo de forma rápida ou fale direto com nossa equipe via WhatsApp para
                             atendimento imediato.</p>
                     </div>
 
-                    <form id="contact-form" action="https://formspree.io/f/xwpqnzoa" method="POST" target="_self"
-                        class="modern-form">
+                    <form id="contact-form" action="https://formspree.io/f/xwpqnzoa" method="POST" class="modern-form" novalidate>
+                        <input type="hidden" name="_subject" value="Novo lead — FacilAdmin Para Você" />
+                        <input type="hidden" name="origem" value="facil-admin-para-voce" />
                         <div class="input-row">
                             <div class="input-group">
                                 <label for="name">Nome Completo / Empresa <span class="req">*</span></label>
                                 <div class="input-with-icon">
-                                    <i class="fas fa-user input-icon"></i>
-                                    <input type="text" id="name" name="name"
+                                    <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                                    <input type="text" id="name" name="name" aria-describedby="name-error" autocomplete="name"
                                         placeholder="Ex: João Silva ou Facilities SA" required />
                                 </div>
+                                <p class="field-error" id="name-error"></p>
                             </div>
                             <div class="input-group">
                                 <label for="phone">WhatsApp / Telefone <span class="req">*</span></label>
                                 <div class="input-with-icon">
-                                    <i class="fas fa-phone-alt input-icon"></i>
-                                    <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required />
+                                    <i class="fas fa-phone-alt input-icon" aria-hidden="true"></i>
+                                    <input type="tel" id="phone" name="phone" aria-describedby="phone-error" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required />
                                 </div>
+                                <p class="field-error" id="phone-error"></p>
                             </div>
                         </div>
 
                         <div class="input-group">
                             <label for="email">E-mail Corporativo <span class="req">*</span></label>
                             <div class="input-with-icon">
-                                <i class="fas fa-envelope input-icon"></i>
-                                <input type="email" id="email" name="email" placeholder="seuemail@empresa.com.br"
+                                <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
+                                <input type="email" id="email" name="email" aria-describedby="email-error" autocomplete="email" placeholder="seuemail@empresa.com.br"
                                     required />
                             </div>
+                                <p class="field-error" id="email-error"></p>
                         </div>
 
                         <div class="input-group">
                             <label for="profile-type">Qual o seu perfil? <span class="req">*</span></label>
                             <div class="select-wrapper">
-                                <select id="profile-type" name="profile_type" required>
+                                <select id="profile-type" name="profile_type" required aria-describedby="profile-type-error">
                                     <option value="" disabled selected>Selecione uma opção...</option>
                                     <option value="condominio">Sou Síndico / Represento Condomínio</option>
                                     <option value="fornecedor">Sou Fornecedor / Prestador de Serviços</option>
                                 </select>
-                                <i class="fas fa-chevron-down select-arrow"></i>
+                                <i class="fas fa-chevron-down select-arrow" aria-hidden="true"></i>
                             </div>
+                            <p class="field-error" id="profile-type-error"></p>
                         </div>
 
                         <div class="input-group">
                             <label for="message">Descreva sua necessidade <span class="req">*</span></label>
                             <textarea id="message" name="message" rows="4"
                                 placeholder="Ex: Preciso de cotação para manutenção das bombas d'água..."
-                                required></textarea>
+                                required aria-describedby="message-error"></textarea>
+                            <p class="field-error" id="message-error"></p>
                         </div>
 
+                        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                        <p class="form-privacy">Usamos seus dados só para responder a esta solicitação (LGPD).</p>
+                        <p class="form-status" id="form-status" role="alert"></p>
                         <button type="submit" class="btn btn-submit btn-large">
-                            Enviar Solicitação Instantânea <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+                            Enviar Solicitação Instantânea <i class="fas fa-paper-plane" style="margin-left: 8px;" aria-hidden="true"></i>
                         </button>
                     </form>
 
-                    <div id="form-feedback" class="form-feedback" style="display: none">
+                    <div id="form-feedback" class="form-feedback" role="status" tabindex="-1" hidden>
                         <div class="feedback-content">
-                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
                             <h3>Solicitação Enviada com Sucesso!</h3>
                             <p>Recebemos seus dados em nossa central. Nossa equipe entrará em contato em instantes.</p>
-                            <button class="btn btn-primary" onclick="hideFeedback()" style="margin-top: 1rem;">Enviar
-                                Nova Mensagem</button>
+                            <button type="button" class="btn btn-primary" id="feedback-ok" style="margin-top: 1rem;">Enviar nova mensagem</button>
                         </div>
                     </div>
                 </div>
@@ -881,9 +890,9 @@
             <div class="footer-content">
                 <p>&copy; 2026 por <strong>LearnTECH & FacilAdmin</strong>. Todos os direitos reservados.</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn (em breve)" class="social-pending"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram (em breve)" class="social-pending"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="WhatsApp (em breve)" class="social-pending"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
