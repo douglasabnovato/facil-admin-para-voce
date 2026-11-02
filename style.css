@@ -353,7 +353,7 @@ header .container {
     box-shadow: var(--shadow-sm);
 }
 
-.mock-card i {
+.mock-card .icone {
     font-size: 1.25rem;
     color: var(--primary-blue);
     background: rgba(0, 47, 135, 0.1);
@@ -520,7 +520,7 @@ header .container {
     justify-content: center;
 }
 
-.sub-cat-item i {
+.sub-cat-item .icone {
     color: var(--primary-blue);
     font-size: 1rem;
 }
@@ -677,7 +677,7 @@ header .container {
     font-weight: 500;
 }
 
-.persona-features li i {
+.persona-features li .icone {
     color: var(--secondary-color);
     font-size: 0.8rem;
     background: rgba(5, 150, 105, 0.1);
@@ -1914,7 +1914,7 @@ header .container {
     align-items: center;
 }
 
-.feedback-content i {
+.feedback-content .icone {
     font-size: 4rem;
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
@@ -2257,4 +2257,21 @@ form[hidden] {
     color: #7c2d12;
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+/* Ícones em SVG embutido */
+.icone {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+}
+.fa-spin {
+  animation: icone-giro 1s linear infinite;
+}
+@keyframes icone-giro {
+  to {
+    transform: rotate(360deg);
+  }
 }
