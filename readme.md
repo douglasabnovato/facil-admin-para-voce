@@ -6,6 +6,8 @@ Desenvolvida com foco em alta conversão, design moderno e experiência de usuá
 
 ---
 
+> **Estado em 02/11/2026:** Página estática no GitHub Pages. O envio usa o Formspree. Testes: `npm ci`, `npx playwright install chromium` e `npm test`, com o Formspree simulado. O envio real não foi testado. Critérios em [docs/MVP.md](docs/MVP.md).
+
 ## 🚀 Sobre o Projeto
 
 O **FacilAdmin Para Você** faz parte do ecossistema de gestão inteligente, resolvendo uma das maiores dores do mercado condominial: a lentidão e a falta de transparência na contratação de produtos e serviços de facilities (manutenção predial, portaria, limpeza, engenharia preventiva, entre outros).
