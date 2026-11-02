@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const originalText = submitButton.innerHTML;
     submitButton.disabled = true;
-    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Enviando solicitação...';
+    submitButton.innerHTML = '<svg class="icone fa-spin" aria-hidden="true" focusable="false"><use href="#i-spinner"/></svg> Enviando solicitação...';
 
     try {
       const response = await fetch(form.action, {
