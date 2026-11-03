@@ -1,6 +1,39 @@
 /* ==========================================
    INÍCIO PARTE GERAL 
    ========================================== */
+/* Poppins (latim) servida pelo próprio site; licença em fonts/OFL.txt */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/poppins-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/poppins-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/poppins-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/poppins-latin-700-normal.woff2") format("woff2");
+}
+
 :root {
     --primary-blue: #002F87;
     /* Azul Royal Vibrante (Referência Carrefour) */
@@ -102,7 +135,7 @@ h3 {
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
     cursor: pointer;
     border: 1px solid transparent;
     white-space: nowrap;
@@ -404,7 +437,7 @@ header .container {
     display: flex;
     flex-direction: column;
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
     position: relative;
     overflow: hidden;
 }
@@ -513,7 +546,7 @@ header .container {
     color: var(--text-main);
     font-size: 0.85rem;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.2s; transition-timing-function: ease;
     box-shadow: var(--shadow-sm);
     flex: 1;
     min-width: 170px;
@@ -581,7 +614,7 @@ header .container {
     flex-direction: column;
     position: relative;
     box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
     overflow: hidden;
 }
 
@@ -785,7 +818,7 @@ header .container {
     padding: 2rem 1rem;
     text-align: center;
     box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -861,7 +894,7 @@ header .container {
     flex-direction: column;
     position: relative;
     box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
 }
 
 .produto-card:hover {
@@ -1028,7 +1061,7 @@ header .container {
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -1072,7 +1105,7 @@ header .container {
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
-    transition: all 0.2s;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.2s; transition-timing-function: ease;
 }
 
 .carrossel-setas button:hover {
@@ -1152,7 +1185,7 @@ header .container {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: all 0.2s;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.2s; transition-timing-function: ease;
     flex-shrink: 0;
 }
 
@@ -1346,7 +1379,7 @@ header .container {
     display: flex;
     flex-direction: column;
     box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
 }
 
 .card-depoimento-v4:hover {
@@ -1699,7 +1732,7 @@ header .container {
     font-weight: 600;
     font-size: 1.05rem;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
     box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.4);
     border: 1px solid rgba(5, 150, 105, 0.8);
 }
@@ -1837,7 +1870,7 @@ header .container {
     font-size: 0.95rem;
     background-color: #f8fafc;
     color: var(--text-main);
-    transition: all 0.3s ease;
+    transition-property: background-color, color, border-color, box-shadow, transform, filter, gap; transition-duration: 0.3s; transition-timing-function: ease;
 }
 
 .modern-form input {
@@ -1854,7 +1887,6 @@ header .container {
 .modern-form input:focus,
 .modern-form textarea:focus,
 .modern-form select:focus {
-    outline: none;
     border-color: var(--primary-blue);
     background-color: #fff;
     box-shadow: 0 0 0 4px rgba(0, 47, 135, 0.1);
@@ -2112,9 +2144,12 @@ footer {
         transition: height 0.3s ease;
         padding: 0;
         box-shadow: none;
+        /* Fechado, o menu sai da ordem do Tab: o foco não some atrás da altura 0 */
+        visibility: hidden;
     }
 
     .nav-menu.active {
+        visibility: visible;
         height: auto;
         padding: 1.5rem 2rem;
         border-bottom: 1px solid var(--border);
@@ -2154,8 +2189,20 @@ footer {
 }
 
 :focus-visible {
-  outline: 3px solid #f59e0b;
+  /* Azul da marca: contraste de pelo menos 3:1 nos fundos claros (WCAG 1.4.11).
+     O âmbar de antes tinha 2,1:1 no branco. */
+  outline: 3px solid #002f87;
   outline-offset: 3px;
+}
+
+/* Fundos escuros ou coloridos: contorno claro */
+.hero-section :focus-visible,
+.card-azul :focus-visible {
+  outline-color: #f59e0b;
+}
+
+.deal-card-coral :focus-visible {
+  outline-color: #ffffff;
 }
 
 header.scrolled {
