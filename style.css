@@ -2225,6 +2225,80 @@ header.scrolled {
   border-color: #b91c1c !important;
 }
 
+/* Como comparar as propostas (ciclo 03/11/2026) */
+.comparar {
+  max-width: 760px;
+  margin: 3rem auto 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+}
+
+.comparar h3 {
+  margin-bottom: 0.5rem;
+}
+
+.comparar-lista {
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+}
+
+.comparar-lista strong {
+  color: var(--text-main);
+}
+
+/* Pedido com vários pacotes (ciclo 03/11/2026) */
+.pedido {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  background: #f8fafc;
+}
+
+.pedido[hidden] {
+  display: none;
+}
+
+.pedido-titulo {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pedido-lista {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pedido-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.pedido-remover {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  color: #b91c1c;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pedido-dica {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
 .form-privacy {
   font-size: 0.8rem;
   color: #475569;

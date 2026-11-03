@@ -73,3 +73,66 @@ test('o pedido de orçamento do pacote preenche o formulário', async ({ page })
   await expect(page.locator('#message')).toHaveValue(/Quero orçamento de:/);
   await expect(page.locator('#name')).toBeFocused();
 });
+
+const literal = (texto) => texto.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+test('o pedido junta vários pacotes, permite remover e vai no envio', async ({ page }) => {
+  let enviado = '';
+  await page.route(FORMSPREE, (r) => {
+    enviado = r.request().postData() || '';
+    return r.fulfill({ status: 200, json: { ok: true } });
+  });
+  await page.goto('/');
+  // Usa o último e o segundo pacote, não o primeiro, para não passar por acaso pela ordem
+  const cards = page.locator('.produto-card').filter({ has: page.locator('.js-orcamento') });
+  const ultimo = cards.last();
+  const segundo = cards.nth(1);
+  const nomeUltimo = (await ultimo.locator('h3').textContent()).trim();
+  const nomeSegundo = (await segundo.locator('h3').textContent()).trim();
+
+  await ultimo.locator('.qty-btn[data-step="1"]').click();
+  await ultimo.locator('.qty-btn[data-step="1"]').click();
+  await ultimo.locator('.js-orcamento').click();
+  await segundo.locator('.js-orcamento').click();
+
+  const lista = page.locator('#pedido-lista li');
+  await expect(lista).toHaveCount(2);
+  await expect(page.locator('#pedido-total')).toHaveText('2');
+  await expect(lista.filter({ hasText: nomeUltimo })).toContainText('quantidade 3');
+  await expect(page.locator('#message')).toHaveValue(new RegExp(`${literal(nomeUltimo)}.*${literal(nomeSegundo)}`));
+
+  // Adicionar o mesmo pacote de novo não duplica
+  await segundo.locator('.js-orcamento').click();
+  await expect(lista).toHaveCount(2);
+
+  await page.getByRole('button', { name: `Remover ${nomeUltimo} do pedido` }).click();
+  await expect(lista).toHaveCount(1);
+  await expect(page.locator('#message')).not.toHaveValue(new RegExp(literal(nomeUltimo)));
+  await expect(page.getByRole('button', { name: `Remover ${nomeSegundo} do pedido` })).toBeFocused();
+
+  const form = page.locator('#contact-form');
+  await form.locator('#name').fill('Ana Souza');
+  await form.locator('#phone').fill('32999990000');
+  await form.locator('#email').fill('ana@exemplo.com');
+  await form.locator('.btn-submit').click();
+  await expect(page.locator('#form-feedback')).toBeVisible();
+  expect(enviado).toContain(nomeSegundo);
+  expect(enviado).toContain('itens_pedido');
+  await expect(page.locator('#pedido')).toBeHidden();
+});
+
+test('a mensagem escrita pela pessoa não é apagada ao adicionar pacote', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('#message').fill('Preciso também de vistoria no telhado.');
+  await page.locator('.produto-card .js-orcamento').last().click();
+  await expect(page.locator('#pedido-lista li')).toHaveCount(1);
+  await expect(page.locator('#message')).toHaveValue('Preciso também de vistoria no telhado.');
+});
+
+test('a seção "Como comparar as propostas" lista os 5 pontos', async ({ page }) => {
+  await page.goto('/');
+  const secao = page.locator('#comparar-propostas');
+  await expect(secao.getByRole('heading', { level: 3 })).toHaveText('Como comparar as propostas');
+  await expect(secao.locator('.comparar-lista > li')).toHaveCount(5);
+  await expect(secao).toContainText('ART');
+});

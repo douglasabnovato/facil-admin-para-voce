@@ -713,6 +713,18 @@
                         <p>Avalie o serviço prestado e fortaleça a reputação da nossa rede.</p>
                     </div>
                 </div>
+
+                <div class="comparar" id="comparar-propostas">
+                    <h3>Como comparar as propostas</h3>
+                    <p>Antes de escolher, confira em cada proposta:</p>
+                    <ol class="comparar-lista">
+                        <li><strong>Mesmo escopo.</strong> Peça a todos a mesma lista de serviços, prazos e materiais. Só assim o preço é comparável.</li>
+                        <li><strong>Pelo menos três propostas por escrito.</strong> O menor preço sozinho não diz se o fornecedor atende uma emergência.</li>
+                        <li><strong>Responsável técnico.</strong> Em obra, manutenção elétrica ou vistoria, exija a ART (engenheiro) ou o RRT (arquiteto).</li>
+                        <li><strong>Empresa regular.</strong> Consulte o CNPJ na Receita Federal e confira se o contrato traz garantia e forma de pagamento.</li>
+                        <li><strong>Seguro da equipe.</strong> Pergunte se a terceirizada tem seguro de vida e acidentes para quem vai trabalhar no prédio.</li>
+                    </ol>
+                </div>
             </div>
         </section>
 
@@ -849,6 +861,13 @@
                             </div>
                             <p class="field-error" id="profile-type-error"></p>
                         </div>
+
+                        <div class="pedido" id="pedido" hidden>
+                            <p class="pedido-titulo" id="pedido-titulo">Seu pedido: <span id="pedido-total">0</span> item(ns)</p>
+                            <ul class="pedido-lista" id="pedido-lista" aria-labelledby="pedido-titulo"></ul>
+                            <p class="pedido-dica">Adicione outros pacotes acima. Um só envio leva todos os itens.</p>
+                        </div>
+                        <input type="hidden" name="itens_pedido" id="itens-pedido" value="" />
 
                         <div class="input-group">
                             <label for="message">Descreva sua necessidade <span class="req">*</span></label>

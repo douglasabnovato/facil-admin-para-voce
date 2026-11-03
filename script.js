@@ -1,6 +1,6 @@
 /*
  * script.js · FacilAdmin Para Você: menu móvel, rolagem com compensação do cabeçalho,
- * quantidade e métrica dos pacotes preenchendo o pedido de orçamento, listas de destaque
+ * quantidade e métrica dos pacotes montando um pedido com vários itens, listas de destaque
  * navegáveis e formulário com validação por campo enviado ao Formspree.
  */
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,6 +45,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* Pedido com vários pacotes: cada item entra uma vez; adicionar de novo atualiza métrica e quantidade. */
+  const order = new Map();
+  const orderBox = document.getElementById("pedido");
+  const orderList = document.getElementById("pedido-lista");
+  const orderTotal = document.getElementById("pedido-total");
+  const orderField = document.getElementById("itens-pedido");
+  let autoMessage = "";
+
+  const describe = (product, { metric, quantity }) => `${product}${metric ? ` — ${metric}` : ""}, quantidade ${quantity}`;
+
+  /* Redesenha a lista e, se a pessoa não escreveu a própria mensagem, refaz o texto do pedido. */
+  const renderOrder = () => {
+    const lines = [...order].map(([product, item]) => describe(product, item));
+    orderList.replaceChildren(...[...order.keys()].map((product, index) => {
+      const li = document.createElement("li");
+      const text = document.createElement("span");
+      text.textContent = lines[index];
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.className = "pedido-remover";
+      remove.textContent = "Remover";
+      remove.setAttribute("aria-label", `Remover ${product} do pedido`);
+      remove.addEventListener("click", () => {
+        order.delete(product);
+        renderOrder();
+        const next = orderList.querySelector(".pedido-remover");
+        (next || form.elements.message).focus();
+      });
+      li.append(text, remove);
+      return li;
+    }));
+    orderBox.hidden = order.size === 0;
+    orderTotal.textContent = String(order.size);
+    orderField.value = lines.join("; ");
+    const message = form.elements.message;
+    if (message.value === "" || message.value === autoMessage) {
+      autoMessage = lines.length ? `Quero orçamento de: ${lines.join("; ")}.` : "";
+      message.value = autoMessage;
+    }
+  };
+
+  const addToOrder = (product, metric, quantity) => {
+    order.set(product, { metric, quantity });
+    renderOrder();
+  };
+
+  const clearOrder = () => {
+    order.clear();
+    autoMessage = "";
+    renderOrder();
+  };
+
   document.querySelectorAll(".produto-card").forEach((card) => {
     const value = card.querySelector(".qty-value");
     let quantity = 1;
@@ -61,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const product = card.querySelector("h3").textContent.trim();
       const select = card.querySelector(".select-metrica");
       const metric = select ? select.options[select.selectedIndex].text : "";
-      form.elements.message.value = `Quero orçamento de: ${product}${metric ? ` — ${metric}` : ""}, quantidade ${quantity}.`;
+      addToOrder(product, metric, quantity);
       form.elements.profile_type.value = "condominio";
       scrollToSection(document.getElementById("contato"));
       form.elements.name.focus({ preventScroll: true });
@@ -123,6 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       form.reset();
+      clearOrder();
       form.hidden = true;
       feedback.hidden = false;
       feedback.focus();
