@@ -13,11 +13,8 @@
     <meta property="og:image" content="https://douglasabnovato.github.io/facil-admin-para-voce/assets/facil-admin-para-voce-4.webp" />
     <meta property="og:url" content="https://douglasabnovato.github.io/facil-admin-para-voce/" />
     <meta property="og:locale" content="pt_BR" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Fontes e ícones não bloqueiam a primeira pintura -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" /></noscript>
+    <!-- Poppins servida pelo próprio site (OFL, fonts/OFL.txt): sem conexão extra antes do título -->
+    <link rel="preload" href="./fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -67,7 +64,7 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-img-wrapper">
-                        <img src="./assets/facil-admin-para-voce-4.webp"
+                        <img src="./assets/facil-admin-para-voce-4.webp" srcset="./assets/facil-admin-para-voce-4-480.webp 480w, ./assets/facil-admin-para-voce-4-640.webp 640w, ./assets/facil-admin-para-voce-4.webp 1000w" sizes="(max-width: 768px) 90vw, 500px"
                             alt="Administradora comercial utilizando FacilAdmin na recepção" class="hero-human-img" width="1000" height="808" fetchpriority="high" decoding="async">
                     </div>
                 </div>
@@ -544,7 +541,7 @@
                 <div class="grid-4-cols gallery-grid">
                     <!-- Imagem 1: Shopping -->
                     <div class="gallery-item">
-                        <img src="./assets/facil-admin-para-voce-2.webp"
+                        <img src="./assets/facil-admin-para-voce-2.webp" srcset="./assets/facil-admin-para-voce-2-480.webp 480w, ./assets/facil-admin-para-voce-2-640.webp 640w, ./assets/facil-admin-para-voce-2.webp 1000w" sizes="(max-width: 768px) 90vw, 400px"
                             alt="Jovem empreendedor utilizando FacilAdmin no Shopping" width="1000" height="627" loading="lazy" decoding="async">
                         <div class="gallery-caption"><strong>Dinamismo Urbano:</strong> Cotações rápidas entre reuniões
                             no shopping.</div>
@@ -552,7 +549,7 @@
 
                     <!-- Imagem 2: Condomínio Residencial -->
                     <div class="gallery-item">
-                        <img src="./assets/facil-admin-para-voce-1.webp"
+                        <img src="./assets/facil-admin-para-voce-1.webp" srcset="./assets/facil-admin-para-voce-1-480.webp 480w, ./assets/facil-admin-para-voce-1-640.webp 640w, ./assets/facil-admin-para-voce-1.webp 1000w" sizes="(max-width: 768px) 90vw, 400px"
                             alt="Síndica profissional gerenciando facilities no condomínio" width="1000" height="786" loading="lazy" decoding="async">
                         <div class="gallery-caption"><strong>Gestão no Local:</strong> Síndica aprova manutenção direto
                             da varanda do prédio.</div>
@@ -560,7 +557,7 @@
 
                     <!-- Imagem 3: Escritório -->
                     <div class="gallery-item">
-                        <img src="./assets/facil-admin-para-voce-3.webp"
+                        <img src="./assets/facil-admin-para-voce-3.webp" srcset="./assets/facil-admin-para-voce-3-480.webp 480w, ./assets/facil-admin-para-voce-3-640.webp 640w, ./assets/facil-admin-para-voce-3.webp 1000w" sizes="(max-width: 768px) 90vw, 400px"
                             alt="Gestor de operações utilizando FacilAdmin no escritório" width="1000" height="667" loading="lazy" decoding="async">
                         <div class="gallery-caption"><strong>Eficiência Corporativa:</strong> Gestor otimiza operações
                             sem sair da mesa.</div>
@@ -568,7 +565,7 @@
 
                     <!-- Imagem 4: Recepção Comercial -->
                     <div class="gallery-item">
-                        <img src="./assets/facil-admin-para-voce-4.webp"
+                        <img src="./assets/facil-admin-para-voce-4.webp" srcset="./assets/facil-admin-para-voce-4-480.webp 480w, ./assets/facil-admin-para-voce-4-640.webp 640w, ./assets/facil-admin-para-voce-4.webp 1000w" sizes="(max-width: 768px) 90vw, 400px"
                             alt="Administradora de condomínio comercial utilizando FacilAdmin" width="1000" height="808" loading="lazy" decoding="async">
                         <div class="gallery-caption"><strong>Comodidade e Controle:</strong> Administradora garante
                             agilidade na recepção.</div>
@@ -716,6 +713,18 @@
                         <p>Avalie o serviço prestado e fortaleça a reputação da nossa rede.</p>
                     </div>
                 </div>
+
+                <div class="comparar" id="comparar-propostas">
+                    <h3>Como comparar as propostas</h3>
+                    <p>Antes de escolher, confira em cada proposta:</p>
+                    <ol class="comparar-lista">
+                        <li><strong>Mesmo escopo.</strong> Peça a todos a mesma lista de serviços, prazos e materiais. Só assim o preço é comparável.</li>
+                        <li><strong>Pelo menos três propostas por escrito.</strong> O menor preço sozinho não diz se o fornecedor atende uma emergência.</li>
+                        <li><strong>Responsável técnico.</strong> Em obra, manutenção elétrica ou vistoria, exija a ART (engenheiro) ou o RRT (arquiteto).</li>
+                        <li><strong>Empresa regular.</strong> Consulte o CNPJ na Receita Federal e confira se o contrato traz garantia e forma de pagamento.</li>
+                        <li><strong>Seguro da equipe.</strong> Pergunte se a terceirizada tem seguro de vida e acidentes para quem vai trabalhar no prédio.</li>
+                    </ol>
+                </div>
             </div>
         </section>
 
@@ -852,6 +861,13 @@
                             </div>
                             <p class="field-error" id="profile-type-error"></p>
                         </div>
+
+                        <div class="pedido" id="pedido" hidden>
+                            <p class="pedido-titulo" id="pedido-titulo">Seu pedido: <span id="pedido-total">0</span> item(ns)</p>
+                            <ul class="pedido-lista" id="pedido-lista" aria-labelledby="pedido-titulo"></ul>
+                            <p class="pedido-dica">Adicione outros pacotes acima. Um só envio leva todos os itens.</p>
+                        </div>
+                        <input type="hidden" name="itens_pedido" id="itens-pedido" value="" />
 
                         <div class="input-group">
                             <label for="message">Descreva sua necessidade <span class="req">*</span></label>
