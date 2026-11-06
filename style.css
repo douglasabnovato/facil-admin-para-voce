@@ -34,6 +34,16 @@
   src: url("./fonts/poppins-latin-700-normal.woff2") format("woff2");
 }
 
+/* Fonte de reserva com as medidas da Poppins: a troca de fonte não empurra o layout (CLS) */
+@font-face {
+  font-family: "Poppins Fallback";
+  src: local("Arial"), local("Liberation Sans"), local("Helvetica");
+  size-adjust: 112.16%;
+  ascent-override: 93.62%;
+  descent-override: 31.21%;
+  line-gap-override: 8.92%;
+}
+
 :root {
     --primary-blue: #002F87;
     /* Azul Royal Vibrante (Referência Carrefour) */
@@ -51,7 +61,7 @@
     --bg-dark: #0f172a;
     --surface: #ffffff;
     --border: #e2e8f0;
-    --poppins: "Poppins", sans-serif;
+    --poppins: "Poppins", "Poppins Fallback", sans-serif;
 
     --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08);
