@@ -6,7 +6,7 @@ Desenvolvida com foco em alta conversão, design moderno e experiência de usuá
 
 ---
 
-> **Estado em 02/11/2026:** Página estática no GitHub Pages. O envio usa o Formspree. Testes: `npm ci`, `npx playwright install chromium` e `npm test`, com o Formspree simulado. O envio real não foi testado. Critérios em [docs/MVP.md](docs/MVP.md).
+> **Estado em 06/11/2026:** Página estática no GitHub Pages. O envio usa o Formspree. Testes: `npm ci`, `npx playwright install chromium` e `npm test`, com o Formspree simulado. O envio real não foi testado. Veja [Estado e próximos passos](#estado-e-próximos-passos-ciclo-de-03112026) e [docs/MVP.md](docs/MVP.md).
 
 ## 🚀 Sobre o Projeto
 
@@ -92,6 +92,51 @@ A concepção visual e estrutural da landing page seguiu premissas rigorosas de 
 Desenvolvido por LearnTECH & FacilAdmin © 2026. Todos os direitos reservados.
 
 *feito por LearnTECH*
+
+---
+
+## Estado e próximos passos (ciclo de 03/11/2026)
+
+Página publicada (HTTP 200 em 06/11/2026): https://douglasabnovato.github.io/facil-admin-para-voce/
+
+### O que foi feito
+
+- CI também nos PRs e pushes da `developer/**` ([#25](https://github.com/douglasabnovato/facil-admin-para-voce/pull/25)).
+- Foco visível com contraste de 3:1 em cada fundo e menu fechado fora do Tab, com teste (PR #25).
+- Fonte Poppins no próprio site, fonte de reserva com as mesmas medidas (contra o salto do CLS) e imagens com `srcset` (PR #25).
+- Pedido com vários pacotes: "Solicitar Orçamento" acrescenta o pacote à lista do formulário, sem apagar a mensagem (PR #25).
+- Seção "Como comparar as propostas": mesmo escopo, três propostas, ART/RRT, CNPJ e seguro, com fontes no plano (PR #25).
+- Critérios do MVP revistos com evidência e data (PR [#16](https://github.com/douglasabnovato/facil-admin-para-voce/pull/16) e PR #25).
+
+### O que queremos fazer
+
+Com o responsável:
+
+- Confirmar preços, selos, avaliações e depoimentos ([#17](https://github.com/douglasabnovato/facil-admin-para-voce/issues/17)).
+- Proteger a `main` com PR e CI ([#18](https://github.com/douglasabnovato/facil-admin-para-voce/issues/18)).
+- Medir o uso sem dados pessoais ([#19](https://github.com/douglasabnovato/facil-admin-para-voce/issues/19)).
+- Enviar um pedido real e testar com alguém de fora ([#20](https://github.com/douglasabnovato/facil-admin-para-voce/issues/20)).
+- Decidir o destino do `deploy.yml` solto na raiz ([#24](https://github.com/douglasabnovato/facil-admin-para-voce/issues/24)).
+
+Com o agente:
+
+- Tirar os 4 PNG não usados, com aval do responsável ([#21](https://github.com/douglasabnovato/facil-admin-para-voce/issues/21)).
+- axe-core no CI ([#22](https://github.com/douglasabnovato/facil-admin-para-voce/issues/22)).
+- Página de privacidade ([#23](https://github.com/douglasabnovato/facil-admin-para-voce/issues/23)).
+
+### Onde está a documentação
+
+- Estado e critérios: [docs/MVP.md](docs/MVP.md).
+- Plano do ciclo: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md#ciclo-de-03112026).
+
+### Rodar os testes
+
+```bash
+node scripts/verificar-links.mjs
+npm ci
+npx playwright install chromium
+npm test
+```
 
 ---
 
