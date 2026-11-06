@@ -103,7 +103,7 @@ Página publicada (HTTP 200 em 06/11/2026): https://douglasabnovato.github.io/fa
 
 - CI também nos PRs e pushes da `developer/**` ([#25](https://github.com/douglasabnovato/facil-admin-para-voce/pull/25)).
 - Foco visível com contraste de 3:1 em cada fundo e menu fechado fora do Tab, com teste (PR #25).
-- Fonte Poppins no próprio site, fonte de reserva com as mesmas medidas (contra o salto do CLS) e imagens com `srcset` (PR #25).
+- Fonte Poppins no próprio site, fonte de reserva com as mesmas medidas e imagens com `srcset`: no site publicado, LCP móvel de 3,00 s para 1,98 s e CLS de 0,26 para 0,001 (PR #25).
 - Pedido com vários pacotes: "Solicitar Orçamento" acrescenta o pacote à lista do formulário, sem apagar a mensagem (PR #25).
 - Seção "Como comparar as propostas": mesmo escopo, três propostas, ART/RRT, CNPJ e seguro, com fontes no plano (PR #25).
 - Critérios do MVP revistos com evidência e data (PR [#16](https://github.com/douglasabnovato/facil-admin-para-voce/pull/16) e PR #25).
