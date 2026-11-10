@@ -95,14 +95,16 @@ Desenvolvido por LearnTECH & FacilAdmin © 2026. Todos os direitos reservados.
 
 ---
 
-## Estado e próximos passos (ciclo de 03/11/2026)
+## Estado e próximos passos (ciclo de 10/11/2026)
 
-Página publicada (HTTP 200 em 06/11/2026): https://douglasabnovato.github.io/facil-admin-para-voce/
+Página publicada (HTTP 200 em 10/11/2026): https://douglasabnovato.github.io/facil-admin-para-voce/
 
-**Estado em 10/11/2026:** Vitrine (N2), 9 de 12 critérios atendidos; **Finalizado: sim**. Os 3 que faltam dependem do responsável. A `main` está protegida desde 10/11/2026 (ruleset `principal-protegida`). Detalhes em [docs/MVP.md](docs/MVP.md).
+**Estado em 10/11/2026:** Vitrine (N2), 11 de 12 critérios atendidos; **Finalizado: sim**. Falta só a conta do GoatCounter, do responsável (#19). A `main` exige os jobs `fluxo` e `links` verdes desde 10/11/2026. Detalhes em [docs/MVP.md](docs/MVP.md).
 
 ### O que foi feito
 
+- Medição com GoatCounter pronta no código, sem cookie e só no site publicado, com o evento `pedido-orcamento` (ciclo de 10/11/2026).
+- Teste que confere os avisos de conteúdo ilustrativo (ciclo de 10/11/2026).
 - CI também nos PRs e pushes da `developer/**` ([#25](https://github.com/douglasabnovato/facil-admin-para-voce/pull/25)).
 - Foco visível com contraste de 3:1 em cada fundo e menu fechado fora do Tab, com teste (PR #25).
 - Fonte Poppins no próprio site, fonte de reserva com as mesmas medidas e imagens com `srcset`: no site publicado, LCP móvel de 3,00 s para 1,98 s e CLS de 0,26 para 0,001 (PR #25).
@@ -114,9 +116,9 @@ Página publicada (HTTP 200 em 06/11/2026): https://douglasabnovato.github.io/fa
 
 Com o responsável:
 
-- Confirmar preços, selos, avaliações e depoimentos ([#17](https://github.com/douglasabnovato/facil-admin-para-voce/issues/17)).
+- Confirmar preços, selos, avaliações e depoimentos para tirar os avisos de ilustrativo ([#17](https://github.com/douglasabnovato/facil-admin-para-voce/issues/17)).
 - Proteger a `main`: feito em 10/11/2026; a [#18](https://github.com/douglasabnovato/facil-admin-para-voce/issues/18) fecha no merge da `main`.
-- Medir o uso sem dados pessoais ([#19](https://github.com/douglasabnovato/facil-admin-para-voce/issues/19)).
+- Criar a conta do GoatCounter com o código `douglasabnovato` ([#19](https://github.com/douglasabnovato/facil-admin-para-voce/issues/19)).
 - Enviar um pedido real e testar com alguém de fora ([#20](https://github.com/douglasabnovato/facil-admin-para-voce/issues/20)).
 - Decidir o destino do `deploy.yml` solto na raiz ([#24](https://github.com/douglasabnovato/facil-admin-para-voce/issues/24)).
 
