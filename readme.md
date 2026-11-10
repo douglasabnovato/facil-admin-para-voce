@@ -99,6 +99,8 @@ Desenvolvido por LearnTECH & FacilAdmin © 2026. Todos os direitos reservados.
 
 Página publicada (HTTP 200 em 06/11/2026): https://douglasabnovato.github.io/facil-admin-para-voce/
 
+**Estado em 10/11/2026:** Vitrine (N2), 9 de 12 critérios atendidos; **Finalizado: sim**. Os 3 que faltam dependem do responsável. A `main` está protegida desde 10/11/2026 (ruleset `principal-protegida`). Detalhes em [docs/MVP.md](docs/MVP.md).
+
 ### O que foi feito
 
 - CI também nos PRs e pushes da `developer/**` ([#25](https://github.com/douglasabnovato/facil-admin-para-voce/pull/25)).
@@ -113,7 +115,7 @@ Página publicada (HTTP 200 em 06/11/2026): https://douglasabnovato.github.io/fa
 Com o responsável:
 
 - Confirmar preços, selos, avaliações e depoimentos ([#17](https://github.com/douglasabnovato/facil-admin-para-voce/issues/17)).
-- Proteger a `main` com PR e CI ([#18](https://github.com/douglasabnovato/facil-admin-para-voce/issues/18)).
+- Proteger a `main`: feito em 10/11/2026; a [#18](https://github.com/douglasabnovato/facil-admin-para-voce/issues/18) fecha no merge da `main`.
 - Medir o uso sem dados pessoais ([#19](https://github.com/douglasabnovato/facil-admin-para-voce/issues/19)).
 - Enviar um pedido real e testar com alguém de fora ([#20](https://github.com/douglasabnovato/facil-admin-para-voce/issues/20)).
 - Decidir o destino do `deploy.yml` solto na raiz ([#24](https://github.com/douglasabnovato/facil-admin-para-voce/issues/24)).
