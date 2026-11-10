@@ -1,10 +1,10 @@
 # MVP — critérios
 
-> Revisão de 06/11/2026 (ciclo `feature/2026-11-03`). Mesmos 12 critérios do `movies`. "Não medido" significa que não há evidência, não que falhe.
+> Revisão de 06/11/2026 (ciclo `feature/2026-11-03`); critério 10 revisto em 10/11/2026. Mesmos 12 critérios do `movies`. "Não medido" significa que não há evidência, não que falhe.
 
 **Nível:** Vitrine (N2), 12 critérios se aplicam.
-**Resumo:** 8 de 12 atendem; 3 parciais (3, 9, 10) e 1 não atende (5). Os 4 dependem do responsável e têm issue aberta com `depende-do-responsavel`.
-**Finalizado:** sim, pela decisão 4 do processo (o que falta depende do responsável: #17, #18, #19, #20).
+**Resumo:** 9 de 12 aplicáveis atendidos; 2 parciais (3, 9) e 1 não atende (5). Os 3 dependem do responsável e têm issue aberta com `depende-do-responsavel`.
+**Finalizado:** sim, pela decisão 4 do processo (o que falta depende do responsável: #17, #19, #20).
 
 | # | Critério | Como verificar | Situação | Evidência e data |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@
 | 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Atende | Lighthouse móvel no site publicado, mediana de 1,98 s e CLS 0,001 depois do PR #26, 06/11 |
 | 8 | Acessibilidade básica | Lighthouse e teclado | Atende | Lighthouse 100; `tests/foco.spec.mjs` confere contorno e contraste de 3:1 em todo Tab, no computador e no celular, 06/11 |
 | 9 | Segurança e conformidade | Riscos decididos; termos cumpridos | Parcial | Preços, selos, avaliações e depoimentos marcados como ilustrativos, sem confirmação (#17) |
-| 10 | Entrega confiável | Publicação só depois de CI verde | Parcial | CI em PRs para `main` e `developer/**`; `main` sem proteção (#18); `deploy.yml` solto na raiz (#24) |
+| 10 | Entrega confiável | Publicação só depois de CI verde | Atende | `gh api repos/douglasabnovato/facil-admin-para-voce/rulesets`, 10/11/2026: ruleset `principal-protegida` ativo (exige PR, bloqueia force push e exclusão); o workflow `CI` (jobs `links` e `fluxo`) roda em PRs para `main` e `developer/**`. O Pages publica a `main`, que só recebe merge de PR (#18). O `deploy.yml` solto na raiz não roda; o destino dele segue na #24, sem efeito na publicação |
 | 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende | 13 testes Playwright no job `fluxo`, 06/11 |
 | 12 | Documentação honesta | Qualquer pessoa roda o projeto, e os números estão certos | Atende | README com comandos, estado e próximos passos, 06/11 |
 
