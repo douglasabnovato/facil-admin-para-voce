@@ -23,7 +23,7 @@
 **Hipótese e meta.** Acreditamos que montar o pedido a partir de um ou mais pacotes, com a quantidade já preenchida, leva ao menos 1 em cada 20 visitantes a enviar o pedido. Saberemos quando o painel do GoatCounter mostrar, em 4 semanas, eventos `pedido-orcamento` em 5% ou mais das visitas. A medição depende da conta do responsável (#19).
 
 **O que a pesquisa trouxe.**
-- A LGPD (Lei 13.709/2018, art. 9º) pede que a pessoa saiba a finalidade, a forma e a duração do tratamento, quem recebe os dados e os direitos dela (art. 18). Fonte: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm. Daí a página de privacidade ligada ao formulário (#23).
+- A LGPD (Lei 13.709/2018, art. 9º) pede que a pessoa saiba a finalidade, a forma e a duração do tratamento, quem recebe os dados e os direitos dela (art. 18). Fonte: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm. Daí a página de privacidade ligada ao formulário (#23). Ela cobre finalidade, forma, quem cuida dos dados, destinatário e direitos; o prazo de guarda e um canal de contato próprio dependem do responsável (#33), então o art. 9º ainda não está completo.
 - O guia de acessibilidade do Playwright recomenda o `@axe-core/playwright` com as regras WCAG A e AA, e avisa que o teste automático não cobre tudo. Fonte: https://playwright.dev/docs/accessibility-testing. Daí o axe no CI, no computador e no celular (#22).
 - O web.dev define o LCP "bom" em até 2,5 s no percentil 75 e recomenda medir no ambiente real. Fonte: https://web.dev/articles/lcp. Daí medir de novo no site publicado, depois de conferir que ele serve a `main`.
 
@@ -43,7 +43,8 @@
 **Riscos.**
 - O app não tem tema escuro próprio (o CSS não tem `prefers-color-scheme`). O axe roda no claro, no computador e no celular; rodar no escuro repetiria a tela clara.
 - Transições e animações podem enganar o axe. O teste desliga as transições antes de medir.
-- O prazo de guarda dos pedidos no Formspree é decisão do responsável; a página de privacidade diz que ele ainda vai ser definido.
+- O prazo de guarda dos pedidos e o canal de contato de privacidade são decisões do responsável (#33); a página de privacidade diz que estão em definição.
+- O axe deixa sem medida o texto sobre degradê. Um teste próprio compara cada texto do topo e dos cartões azuis com cada cor do degradê.
 
 **Qualidade.** Testes Playwright (fluxo, foco e axe), `verificar-links` também na `privacidade.html`, `npm audit --omit=dev`.
 
@@ -58,7 +59,7 @@
 4. LCP medido de novo no site publicado.
 5. `docs/MVP.md`, README e `docs/DEPLOY.md`.
 
-**Vira issue.** Ligar os alertas do Dependabot e definir o prazo de guarda dos pedidos (responsável). Seguem abertas: #17, #19, #20, #21, #24.
+**Vira issue.** Ligar os alertas do Dependabot (#32) e definir o prazo de guarda e o contato de privacidade (#33), com o responsável; medir o LCP de novo depois da publicação (#36). A #34 (contraste sobre o degradê) foi resolvida neste ciclo. Seguem abertas: #17, #19, #20, #21, #24.
 
 ## Ciclo de 03/11/2026
 

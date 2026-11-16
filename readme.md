@@ -105,8 +105,8 @@ Página publicada (HTTP 200 em 16/11/2026): https://douglasabnovato.github.io/fa
 
 ### O que foi feito
 
-- axe-core no CI, no computador e no celular, com o contraste de todo o texto medido e o mouse sobre o botão de envio ([#22](https://github.com/douglasabnovato/facil-admin-para-voce/issues/22), ciclo de 16/11/2026).
-- Página de privacidade ligada ao formulário: dados pedidos, finalidade, quem recebe e como pedir a exclusão ([#23](https://github.com/douglasabnovato/facil-admin-para-voce/issues/23), ciclo de 16/11/2026).
+- axe-core no CI, no computador e no celular, com o contraste medido também no texto sobre degradê; o selo do topo passou de 3,1:1 para 5,6:1 ([#22](https://github.com/douglasabnovato/facil-admin-para-voce/issues/22), [#34](https://github.com/douglasabnovato/facil-admin-para-voce/issues/34), [PR #35](https://github.com/douglasabnovato/facil-admin-para-voce/pull/35)).
+- Página de privacidade ligada ao formulário: dados pedidos, finalidade, quem recebe e como pedir a exclusão ([#23](https://github.com/douglasabnovato/facil-admin-para-voce/issues/23), PR #35).
 - Critério 9 revisto: com o Dependabot desligado, fica Parcial (ciclo de 16/11/2026).
 - LCP móvel medido de novo no site publicado: mediana 2,20 s (16/11/2026).
 - Medição com GoatCounter pronta no código, sem cookie e só no site publicado, e teste dos avisos de conteúdo ilustrativo ([#31](https://github.com/douglasabnovato/facil-admin-para-voce/pull/31)).
@@ -119,14 +119,14 @@ Com o responsável:
 
 - Criar a conta do GoatCounter com o código `douglasabnovato` ([#19](https://github.com/douglasabnovato/facil-admin-para-voce/issues/19)).
 - Ligar os alertas do Dependabot ([#32](https://github.com/douglasabnovato/facil-admin-para-voce/issues/32)).
-- Definir o prazo de guarda dos pedidos ([#33](https://github.com/douglasabnovato/facil-admin-para-voce/issues/33)).
+- Definir o prazo de guarda e o contato de privacidade ([#33](https://github.com/douglasabnovato/facil-admin-para-voce/issues/33)).
 - Confirmar preços, selos, avaliações e depoimentos para tirar os avisos de ilustrativo ([#17](https://github.com/douglasabnovato/facil-admin-para-voce/issues/17)).
 - Enviar um pedido real e testar com alguém de fora ([#20](https://github.com/douglasabnovato/facil-admin-para-voce/issues/20)).
 - Decidir o destino do `deploy.yml` solto na raiz ([#24](https://github.com/douglasabnovato/facil-admin-para-voce/issues/24)).
 
 Com o agente:
 
-- Medir o contraste dos textos sobre o degradê do topo ([#34](https://github.com/douglasabnovato/facil-admin-para-voce/issues/34)).
+- Medir o LCP de novo depois da publicação deste ciclo ([#36](https://github.com/douglasabnovato/facil-admin-para-voce/issues/36)).
 - Tirar os 4 PNG não usados, com aval do responsável ([#21](https://github.com/douglasabnovato/facil-admin-para-voce/issues/21)).
 
 ### Onde está a documentação
@@ -147,7 +147,7 @@ npx playwright install chromium
 npm test
 ```
 
-Para usar outra porta local: `PORT=4300 npm test` (o padrão é 4173).
+Para usar outra porta local (o padrão é 4173): no Git Bash, `PORT=4300 npm test`; no PowerShell, `$env:PORT=4300; npm test`.
 
 ---
 
