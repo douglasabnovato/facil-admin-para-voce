@@ -101,13 +101,13 @@ Desenvolvido por LearnTECH & FacilAdmin © 2026. Todos os direitos reservados.
 
 Página publicada (HTTP 200 em 16/11/2026): https://douglasabnovato.github.io/facil-admin-para-voce/
 
-**Estado em 16/11/2026:** Vitrine (N2), 10 de 12 critérios atendidos; **Finalizado: sim**. Os 2 parciais dependem do responsável: a conta do GoatCounter (#19) e os alertas do Dependabot (#32). A `main` exige os jobs `fluxo` e `links` verdes. Detalhes em [docs/MVP.md](docs/MVP.md).
+**Estado em 16/11/2026:** Vitrine (N2), 10 de 12 critérios atendidos; **Finalizado: sim**. Os 2 parciais dependem do responsável: a conta do GoatCounter (#19) e o prazo de guarda e o contato de privacidade (#33). Os alertas do Dependabot foram ligados em 16/11/2026 e mostram 0 abertos (15h06), com `npm audit --omit=dev` sem vulnerabilidades. A `main` exige os jobs `fluxo` e `links` verdes. Detalhes em [docs/MVP.md](docs/MVP.md).
 
 ### O que foi feito
 
 - axe-core no CI, no computador e no celular, com o contraste medido também no texto sobre degradê; o selo do topo passou de 3,1:1 para 5,6:1 ([#22](https://github.com/douglasabnovato/facil-admin-para-voce/issues/22), [#34](https://github.com/douglasabnovato/facil-admin-para-voce/issues/34), [PR #35](https://github.com/douglasabnovato/facil-admin-para-voce/pull/35)).
 - Página de privacidade ligada ao formulário: dados pedidos, finalidade, quem recebe e como pedir a exclusão ([#23](https://github.com/douglasabnovato/facil-admin-para-voce/issues/23), PR #35).
-- Critério 9 revisto: com o Dependabot desligado, fica Parcial (ciclo de 16/11/2026).
+- Critério 9 revisto: com os alertas do Dependabot ligados (0 abertos, 16/11/2026 15h06), segue Parcial só pela página de privacidade (#33).
 - LCP móvel medido de novo no site publicado: mediana 2,20 s (16/11/2026).
 - Medição com GoatCounter pronta no código, sem cookie e só no site publicado, e teste dos avisos de conteúdo ilustrativo ([#31](https://github.com/douglasabnovato/facil-admin-para-voce/pull/31)).
 - `main` protegida, com os jobs `fluxo` e `links` obrigatórios ([#29](https://github.com/douglasabnovato/facil-admin-para-voce/pull/29)).
@@ -118,7 +118,7 @@ Página publicada (HTTP 200 em 16/11/2026): https://douglasabnovato.github.io/fa
 Com o responsável:
 
 - Criar a conta do GoatCounter com o código `douglasabnovato` ([#19](https://github.com/douglasabnovato/facil-admin-para-voce/issues/19)).
-- Ligar os alertas do Dependabot ([#32](https://github.com/douglasabnovato/facil-admin-para-voce/issues/32)).
+- Fechar a issue dos alertas do Dependabot, já ligados e sem alerta aberto em 16/11/2026 ([#32](https://github.com/douglasabnovato/facil-admin-para-voce/issues/32)).
 - Definir o prazo de guarda e o contato de privacidade ([#33](https://github.com/douglasabnovato/facil-admin-para-voce/issues/33)).
 - Confirmar preços, selos, avaliações e depoimentos para tirar os avisos de ilustrativo ([#17](https://github.com/douglasabnovato/facil-admin-para-voce/issues/17)).
 - Enviar um pedido real e testar com alguém de fora ([#20](https://github.com/douglasabnovato/facil-admin-para-voce/issues/20)).
