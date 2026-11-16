@@ -2406,3 +2406,38 @@ form[hidden] {
     transform: rotate(360deg);
   }
 }
+
+/* Página de privacidade (privacidade.html) */
+.privacidade {
+  background: var(--bg-app);
+  padding: 3rem 0;
+  min-height: 100vh;
+}
+
+.privacidade-texto {
+  max-width: 760px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+.privacidade-texto h1 {
+  color: var(--primary-blue);
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+.privacidade-texto h2 {
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+.privacidade-texto a,
+.form-privacy a {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}

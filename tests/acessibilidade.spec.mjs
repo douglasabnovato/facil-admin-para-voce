@@ -83,6 +83,11 @@ for (const tela of TELAS) {
       await expect(page.locator('#form-feedback')).toBeVisible();
       expect(await violacoes(page, '#contato')).toEqual([]);
     });
+
+    test('a página de privacidade não tem violação', async ({ page }) => {
+      await abrir(page, '/privacidade.html');
+      expect(await violacoes(page)).toEqual([]);
+    });
   });
 }
 
