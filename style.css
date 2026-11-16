@@ -296,7 +296,8 @@ header .container {
     display: inline-block;
     padding: 6px 14px;
     background: rgba(255, 255, 255, 0.15);
-    color: #60a5fa;
+    /* #60a5fa dava 3,1:1 sobre o azul com 15% de branco; #bfdbfe dá 5,6:1 */
+    color: #bfdbfe;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;

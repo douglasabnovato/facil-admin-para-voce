@@ -179,11 +179,11 @@ test('o formulário leva à página de privacidade, que explica o uso dos dados'
   await page.locator('#contact-form .form-privacy a').click();
   await expect(page).toHaveURL(/privacidade\.html$/);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Privacidade no pedido de orçamento');
-  for (const id of ['dados', 'finalidade', 'destinatario', 'guarda', 'medicao', 'direitos']) {
+  for (const id of ['controlador', 'dados', 'finalidade', 'destinatario', 'guarda', 'medicao', 'direitos']) {
     await expect(page.locator(`#${id}`)).toBeVisible();
   }
   await expect(page.locator('#destinatario + p')).toContainText('Formspree');
   await expect(page.locator('#direitos + p')).toContainText('excluir meus dados');
-  await page.getByRole('link', { name: 'formulário' }).click();
+  await page.getByRole('link', { name: 'formulário', exact: true }).click();
   await expect(page.locator('#contact-form')).toBeVisible();
 });
