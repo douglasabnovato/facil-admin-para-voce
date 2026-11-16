@@ -59,7 +59,7 @@
 4. LCP medido de novo no site publicado.
 5. `docs/MVP.md`, README e `docs/DEPLOY.md`.
 
-**Vira issue.** Ligar os alertas do Dependabot (#32) e definir o prazo de guarda e o contato de privacidade (#33), com o responsável; medir o LCP de novo depois da publicação (#36). A #34 (contraste sobre o degradê) foi resolvida neste ciclo. Seguem abertas: #17, #19, #20, #21, #24.
+**Vira issue.** Ligar os alertas do Dependabot (#32) e definir o prazo de guarda e o contato de privacidade (#33), com o responsável; medir o LCP de novo depois da publicação (#36). A #34 (contraste sobre o degradê) foi resolvida no PR #35 e fecha no merge da `main`. Seguem abertas: #17, #19, #20, #21, #24.
 
 ## Ciclo de 03/11/2026
 

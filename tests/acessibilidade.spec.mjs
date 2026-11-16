@@ -134,7 +134,8 @@ test('o menu móvel aberto não tem violação', async ({ page }) => {
 
 // O axe não mede texto sobre degradê nem, no celular, o painel simulado. Aqui, cada
 // texto do topo, dos cartões azuis e do painel é comparado com cada cor do fundo
-// (e, no título em degradê, com cada cor da letra). Exige 4,5:1, ou 3:1 em texto grande (24 px, ou 18,66 px em negrito).
+// (e, no título em degradê, com cada cor da letra). Limite: usa só o RGB das paradas
+// e ignora imagens url(); serve porque os degradês desses fundos são opacos. Exige 4,5:1, ou 3:1 em texto grande (24 px, ou 18,66 px em negrito).
 const medirDegrade = () => {
   const cores = (t) => [...t.matchAll(/rgba?\(([^)]+)\)/g)].map((m) => m[1].split(/[ ,/]+/).filter(Boolean).map(Number));
   const luz = ([r, g, b]) => {
