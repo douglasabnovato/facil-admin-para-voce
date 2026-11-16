@@ -1,7 +1,8 @@
-// Falha se o index.html apontar para um arquivo local que não existe.
+// Falha se uma página do site apontar para um arquivo local que não existe.
 import { existsSync, readFileSync } from 'node:fs';
 
-const html = readFileSync('index.html', 'utf8');
+const PAGINAS = ['index.html', 'privacidade.html'];
+const html = PAGINAS.map((p) => readFileSync(p, 'utf8')).join(' ');
 const refs = [...html.matchAll(/(?:href|src)=["']([^"'#?]+)/gi)].map((m) => m[1]);
 // srcset: "a.webp 480w, b.webp 900w"
 for (const m of html.matchAll(/srcset=["']([^"']+)/gi)) {

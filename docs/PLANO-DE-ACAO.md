@@ -14,6 +14,53 @@
 | T10 | Must (usuário) | Apagar os 4 PNG de `assets/` | D1 | C9 | 1 | ⏳ Com você |
 | T11 | Could | Teste automatizado (Playwright + axe) no CI | — | C6 | 2 | Roadmap |
 
+## Ciclo de 16/11/2026
+
+### Produto
+
+**Problema e público.** Síndicos e administradoras perdem tempo para cotar serviços de facilities. A página mostra pacotes e monta um pedido de orçamento. O público é quem cuida de condomínio e quer comparar propostas.
+
+**Hipótese e meta.** Acreditamos que montar o pedido a partir de um ou mais pacotes, com a quantidade já preenchida, leva ao menos 1 em cada 20 visitantes a enviar o pedido. Saberemos quando o painel do GoatCounter mostrar, em 4 semanas, eventos `pedido-orcamento` em 5% ou mais das visitas. A medição depende da conta do responsável (#19).
+
+**O que a pesquisa trouxe.**
+- A LGPD (Lei 13.709/2018, art. 9º) pede que a pessoa saiba a finalidade, a forma e a duração do tratamento, quem recebe os dados e os direitos dela (art. 18). Fonte: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm. Daí a página de privacidade ligada ao formulário (#23). Ela cobre finalidade, forma, quem cuida dos dados, destinatário e direitos; o prazo de guarda e um canal de contato próprio dependem do responsável (#33), então o art. 9º ainda não está completo.
+- O guia de acessibilidade do Playwright recomenda o `@axe-core/playwright` com as regras WCAG A e AA, e avisa que o teste automático não cobre tudo. Fonte: https://playwright.dev/docs/accessibility-testing. Daí o axe no CI, no computador e no celular (#22).
+- O web.dev define o LCP "bom" em até 2,5 s no percentil 75 e recomenda medir no ambiente real. Fonte: https://web.dev/articles/lcp. Daí medir de novo no site publicado, depois de conferir que ele serve a `main`.
+
+**Backlog priorizado (impacto × esforço).**
+1. axe no CI (#22): impacto alto, esforço baixo.
+2. Página de privacidade (#23): impacto alto, esforço baixo.
+3. Critério 9 honesto: o Dependabot está desligado, então fica Parcial até os alertas serem ligados.
+4. LCP medido de novo no site publicado.
+5. Validação com pessoa de fora (#20), conta de medição (#19) e confirmação do conteúdo (#17): com o responsável.
+
+**Fora do escopo.** Pagamento online, cadastro de fornecedor nesta página, catálogo com preço fechado, área logada, banner de cookies (a página não usa cookie).
+
+### Engenharia
+
+**Arquitetura.** Página estática (`index.html`, `style.css`, `script.js`), sem build, publicada pelo GitHub Pages no modo legado, a partir da `main`, pasta raiz. O envio vai ao Formspree por `fetch`. A página nova `privacidade.html` usa o mesmo `style.css`.
+
+**Riscos.**
+- O app não tem tema escuro próprio (o CSS não tem `prefers-color-scheme`). O axe roda no claro, no computador e no celular; rodar no escuro repetiria a tela clara.
+- Transições e animações podem enganar o axe. O teste desliga as transições antes de medir.
+- O prazo de guarda dos pedidos e o canal de contato de privacidade são decisões do responsável (#33); a página de privacidade diz que estão em definição.
+- O axe deixa sem medida o texto sobre degradê. Um teste próprio compara cada texto do topo e dos cartões azuis com cada cor do degradê.
+
+**Qualidade.** Testes Playwright (fluxo, foco e axe), `verificar-links` também na `privacidade.html`, `npm audit --omit=dev`.
+
+**Definição de pronto.** `node scripts/verificar-links.mjs` e `npm test` passam; CI verde no PR; revisão independente feita; `docs/MVP.md` e README atualizados; LCP medido no site publicado com o hash dos arquivos conferido.
+
+### Plano de ação
+
+**Este ciclo executa.**
+1. axe-core no Playwright, no computador e no celular, com as transições desligadas e o mouse sobre o botão de envio (#22).
+2. Página de privacidade ligada ao formulário, com teste (#23).
+3. Critério 9 como Parcial, com a issue de ligar os alertas do Dependabot.
+4. LCP medido de novo no site publicado.
+5. `docs/MVP.md`, README e `docs/DEPLOY.md`.
+
+**Vira issue.** Ligar os alertas do Dependabot (#32) e definir o prazo de guarda e o contato de privacidade (#33), com o responsável; medir o LCP de novo depois da publicação (#36). A #34 (contraste sobre o degradê) foi resolvida no PR #35 e fecha no merge da `main`. Seguem abertas: #17, #19, #20, #21, #24.
+
 ## Ciclo de 03/11/2026
 
 > Branch `feature/2026-11-03` → `developer/sprint-2026-11-05` → `main`. Nível: Vitrine (N2), 12 critérios. Publicação: GitHub Pages (`main`, pasta raiz).
