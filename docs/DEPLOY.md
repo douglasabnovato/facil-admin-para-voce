@@ -20,7 +20,7 @@ Publicar uma landing page em HTML, CSS e JavaScript puros (sem build), com formu
 | Mudança | Arquivo | Por quê |
 |---|---|---|
 | `og:image` com endereço absoluto e `og:url` | `index.html` | Redes sociais não resolvem caminho relativo na prévia do link |
-| Remoção do workflow sem uso | `deploy.yml` (apagar com `git rm`) | Com a publicação pela branch, o workflow fica redundante |
+| Workflow sem uso | `deploy.yml` | Com a publicação pela branch, ele fica redundante; apagar ou mover é decisão do responsável (#24) |
 | Seção "Em produção" e nota de publicação | `readme.md` | Link da demonstração e forma de publicar |
 
 Já estava pronto do ciclo anterior: `.nojekyll`, imagens em WebP e formulário no Formspree com os campos `origem` e `_subject`.
@@ -30,23 +30,30 @@ Já estava pronto do ciclo anterior: `.nojekyll`, imagens em WebP e formulário 
 - Preços, estrelas e depoimentos precisam aparecer como **ilustrativos** (CDC art. 37).
 - Enviar os links reais de redes sociais para substituir os de exemplo.
 
-## 3. Solução (passo a passo)
+## 3. Estado em 16/11/2026
+
+- O GitHub Pages está ligado no modo legado ("Deploy from a branch"): branch `main`, pasta `/ (root)`. Conferido com `gh api repos/douglasabnovato/facil-admin-para-voce/pages` em 16/11/2026 (`build_type: legacy`).
+- O site responde HTTP 200 em https://douglasabnovato.github.io/facil-admin-para-voce/, e o `index.html`, o `style.css` e o `script.js` publicados são iguais aos da `main` (md5, 16/11/2026).
+- A `main` só recebe PR com os jobs `fluxo` e `links` verdes (ruleset). Por isso o Pages só publica o que passou no CI.
+- Páginas publicadas: `index.html` e `privacidade.html`. Não há build.
+- O `deploy.yml` na raiz não roda (fica fora de `.github/workflows/`). A escolha entre apagá-lo e publicar por Actions é do responsável (#24).
+- A medição (GoatCounter) depende da conta do responsável (#19).
+
+## 4. Passo a passo (para conferir ou refazer)
 
 ### Etapa 1 · Conferir localmente
 
-1. Abrir o `index.html` com o Live Server e testar menu, carrossel de destaques e envio do formulário.
+1. `npm ci` e `npm run links`.
+2. `npx playwright install chromium` e `npm test` (Node 22.12 ou mais novo).
+3. Para abrir no navegador: `npx http-server . -p 4173`, e visitar http://127.0.0.1:4173.
 
-### Etapa 2 · Subir para o GitHub (Git Bash)
+### Etapa 2 · Publicar
 
-1. `cd /c/ambiente-projeto/ser-mvp/facil-admin-para-voce`
-2. `git rm deploy.yml`
-3. `git rm assets/facil-admin-para-voce-1.png assets/facil-admin-para-voce-2.png assets/facil-admin-para-voce-3.png assets/facil-admin-para-voce-4.png`
-4. `git status`
-5. `git add -A`
-6. `git commit -m "perf: WebP, orçamento com quantidade, contraste AA, docs e publicação no GitHub Pages"`
-7. `git push`
+1. Abrir um PR da `developer/sprint-<data>` para a `main`.
+2. Esperar os jobs `fluxo` e `links` ficarem verdes e mesclar (só o responsável mescla na `main`).
+3. O Pages publica sozinho em 1 a 2 minutos (run "pages build and deployment" em Actions).
 
-### Etapa 3 · Ativar o GitHub Pages
+### Etapa 3 · Se o Pages estiver desligado (responsável)
 
 1. No repositório, **Settings → Pages**.
 2. Em **Build and deployment → Source**, escolher **Deploy from a branch**.
@@ -55,10 +62,7 @@ Já estava pronto do ciclo anterior: `.nojekyll`, imagens em WebP e formulário 
 
 ### Etapa 4 · Conferir no ar
 
-1. `https://douglasabnovato.github.io/facil-admin-para-voce/` abre com imagens e estilos.
-2. Enviar o formulário e confirmar a chegada no e-mail do Formspree (o primeiro envio pede confirmação).
-3. Colar o link numa conversa do WhatsApp e ver a prévia com imagem.
-
-### Etapa 5 · Fechar
-
-1. No GitHub, **About → Website**: colar a URL.
+1. `curl -s -o /dev/null -w "%{http_code}" https://douglasabnovato.github.io/facil-admin-para-voce/` responde 200.
+2. Comparar o md5 do `index.html` publicado com o da `main`.
+3. `curl -s -o /dev/null -w "%{http_code}" https://douglasabnovato.github.io/facil-admin-para-voce/privacidade.html` responde 200.
+4. Enviar um pedido real e confirmar a chegada no e-mail do Formspree (responsável, #20).

@@ -6,7 +6,7 @@ Desenvolvida com foco em alta conversão, design moderno e experiência de usuá
 
 ---
 
-> **Estado em 06/11/2026:** Página estática no GitHub Pages. O envio usa o Formspree. Testes: `npm ci`, `npx playwright install chromium` e `npm test`, com o Formspree simulado. O envio real não foi testado. Veja [Estado e próximos passos](#estado-e-próximos-passos-ciclo-de-03112026) e [docs/MVP.md](docs/MVP.md).
+> **Estado em 16/11/2026:** Página estática no GitHub Pages. O envio usa o Formspree. Testes: `npm ci`, `npx playwright install chromium` e `npm test` (Node 22.12 ou mais novo), com o Formspree simulado. Veja [Estado e próximos passos](#estado-e-próximos-passos-ciclo-de-16112026) e [docs/MVP.md](docs/MVP.md).
 
 ## 🚀 Sobre o Projeto
 
@@ -69,6 +69,8 @@ FACIL-ADMIN-PARA-VOCE/
 ├── .nojekyll                        # Arquivo vazio essencial que desativa o processador Jekyll do GitHub Pages
 ├── docs/                            # Análise, arquitetura e plano de ação do MVP
 ├── index.html                       # Arquivo principal contendo todas as dobras e a semântica da página
+├── privacidade.html                 # Como os dados do pedido de orçamento são tratados (LGPD)
+├── tests/                           # Testes Playwright: fluxo, foco e acessibilidade (axe)
 ├── readme.md                        # Documentação completa e estruturada do projeto
 ├── script.js                        # Controladores lógicos, menu mobile e submissão assíncrona
 └── style.css                        # Folha de estilos customizada e Design System unificado
@@ -95,52 +97,57 @@ Desenvolvido por LearnTECH & FacilAdmin © 2026. Todos os direitos reservados.
 
 ---
 
-## Estado e próximos passos (ciclo de 10/11/2026)
+## Estado e próximos passos (ciclo de 16/11/2026)
 
-Página publicada (HTTP 200 em 10/11/2026): https://douglasabnovato.github.io/facil-admin-para-voce/
+Página publicada (HTTP 200 em 16/11/2026): https://douglasabnovato.github.io/facil-admin-para-voce/
 
-**Estado em 10/11/2026:** Vitrine (N2), 11 de 12 critérios atendidos; **Finalizado: sim**. Falta só a conta do GoatCounter, do responsável (#19). A `main` exige os jobs `fluxo` e `links` verdes desde 10/11/2026. Detalhes em [docs/MVP.md](docs/MVP.md).
+**Estado em 16/11/2026:** Vitrine (N2), 10 de 12 critérios atendidos; **Finalizado: sim**. Os 2 parciais dependem do responsável: a conta do GoatCounter (#19) e os alertas do Dependabot (#32). A `main` exige os jobs `fluxo` e `links` verdes. Detalhes em [docs/MVP.md](docs/MVP.md).
 
 ### O que foi feito
 
-- Medição com GoatCounter pronta no código, sem cookie e só no site publicado, com o evento `pedido-orcamento` (ciclo de 10/11/2026).
-- Teste que confere os avisos de conteúdo ilustrativo (ciclo de 10/11/2026).
-- CI também nos PRs e pushes da `developer/**` ([#25](https://github.com/douglasabnovato/facil-admin-para-voce/pull/25)).
-- Foco visível com contraste de 3:1 em cada fundo e menu fechado fora do Tab, com teste (PR #25).
-- Fonte Poppins no próprio site, fonte de reserva com as mesmas medidas e imagens com `srcset`: no site publicado, LCP móvel de 3,00 s para 1,98 s e CLS de 0,26 para 0,001 (PR #25).
-- Pedido com vários pacotes: "Solicitar Orçamento" acrescenta o pacote à lista do formulário, sem apagar a mensagem (PR #25).
-- Seção "Como comparar as propostas": mesmo escopo, três propostas, ART/RRT, CNPJ e seguro, com fontes no plano (PR #25).
-- Critérios do MVP revistos com evidência e data (PR [#16](https://github.com/douglasabnovato/facil-admin-para-voce/pull/16) e PR #25).
+- axe-core no CI, no computador e no celular, com o contraste de todo o texto medido e o mouse sobre o botão de envio ([#22](https://github.com/douglasabnovato/facil-admin-para-voce/issues/22), ciclo de 16/11/2026).
+- Página de privacidade ligada ao formulário: dados pedidos, finalidade, quem recebe e como pedir a exclusão ([#23](https://github.com/douglasabnovato/facil-admin-para-voce/issues/23), ciclo de 16/11/2026).
+- Critério 9 revisto: com o Dependabot desligado, fica Parcial (ciclo de 16/11/2026).
+- LCP móvel medido de novo no site publicado: mediana 2,20 s (16/11/2026).
+- Medição com GoatCounter pronta no código, sem cookie e só no site publicado, e teste dos avisos de conteúdo ilustrativo ([#31](https://github.com/douglasabnovato/facil-admin-para-voce/pull/31)).
+- `main` protegida, com os jobs `fluxo` e `links` obrigatórios ([#29](https://github.com/douglasabnovato/facil-admin-para-voce/pull/29)).
+- Foco visível com contraste de 3:1, fonte local, `srcset` e pedido com vários pacotes ([#25](https://github.com/douglasabnovato/facil-admin-para-voce/pull/25)).
 
 ### O que queremos fazer
 
 Com o responsável:
 
-- Confirmar preços, selos, avaliações e depoimentos para tirar os avisos de ilustrativo ([#17](https://github.com/douglasabnovato/facil-admin-para-voce/issues/17)).
-- Proteger a `main`: feito em 10/11/2026; a [#18](https://github.com/douglasabnovato/facil-admin-para-voce/issues/18) fecha no merge da `main`.
 - Criar a conta do GoatCounter com o código `douglasabnovato` ([#19](https://github.com/douglasabnovato/facil-admin-para-voce/issues/19)).
+- Ligar os alertas do Dependabot ([#32](https://github.com/douglasabnovato/facil-admin-para-voce/issues/32)).
+- Definir o prazo de guarda dos pedidos ([#33](https://github.com/douglasabnovato/facil-admin-para-voce/issues/33)).
+- Confirmar preços, selos, avaliações e depoimentos para tirar os avisos de ilustrativo ([#17](https://github.com/douglasabnovato/facil-admin-para-voce/issues/17)).
 - Enviar um pedido real e testar com alguém de fora ([#20](https://github.com/douglasabnovato/facil-admin-para-voce/issues/20)).
 - Decidir o destino do `deploy.yml` solto na raiz ([#24](https://github.com/douglasabnovato/facil-admin-para-voce/issues/24)).
 
 Com o agente:
 
+- Medir o contraste dos textos sobre o degradê do topo ([#34](https://github.com/douglasabnovato/facil-admin-para-voce/issues/34)).
 - Tirar os 4 PNG não usados, com aval do responsável ([#21](https://github.com/douglasabnovato/facil-admin-para-voce/issues/21)).
-- axe-core no CI ([#22](https://github.com/douglasabnovato/facil-admin-para-voce/issues/22)).
-- Página de privacidade ([#23](https://github.com/douglasabnovato/facil-admin-para-voce/issues/23)).
 
 ### Onde está a documentação
 
 - Estado e critérios: [docs/MVP.md](docs/MVP.md).
-- Plano do ciclo: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md#ciclo-de-03112026).
+- Plano do ciclo: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md#ciclo-de-16112026).
+- Publicação: [docs/DEPLOY.md](docs/DEPLOY.md).
+- Privacidade: [privacidade.html](privacidade.html).
 
 ### Rodar os testes
 
+Precisa do Node 22.12 ou mais novo (exigência do `@axe-core/playwright` 4.14).
+
 ```bash
-node scripts/verificar-links.mjs
 npm ci
+npm run links
 npx playwright install chromium
 npm test
 ```
+
+Para usar outra porta local: `PORT=4300 npm test` (o padrão é 4173).
 
 ---
 
