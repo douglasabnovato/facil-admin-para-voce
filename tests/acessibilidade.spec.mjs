@@ -6,9 +6,7 @@ import { expect, test } from '@playwright/test';
 const REGRAS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 const TELAS = [
   { nome: 'computador', viewport: { width: 1280, height: 800 } },
-  // No celular, o axe acusa sobreposição (bgOverlap) em 2 textos do painel
-  // simulado e não mede; as mesmas cores são medidas no computador.
-  { nome: 'celular', viewport: { width: 375, height: 812 }, foraDoContraste: '.widget-light-theme .mock-card span' },
+  { nome: 'celular', viewport: { width: 375, height: 812 } },
 ];
 
 // Transição ou animação no meio faz o axe ler cor com opacidade parcial.
@@ -35,11 +33,14 @@ const violacoes = async (page, escopo) => {
 // medir. Desligados, o axe mede quase tudo. Sobram, cada um com seletor e limite:
 // - o degradê azul (bgGradient): só no topo (#hero, 7 textos) e nos cartões azuis
 //   (.card-azul, 12 textos); o teste "texto sobre degradê" mede esses à parte;
-// - os símbolos ‹ › e ★ (nonBmp): só nas setas e nas estrelas das listas, no máximo 15.
+// - os símbolos ‹ › e ★ (nonBmp): só nas setas e nas estrelas das listas, no máximo 15;
+// - a "sobreposição" (bgOverlap) no painel simulado (.widget-light-theme, 8 textos),
+//   que no celular muda entre máquinas; o teste próprio também mede esses textos.
 const EXCECOES = [
   { dentro: '#hero', motivo: 'bgGradient', alvo: /./, limite: 7 },
   { dentro: '.card-azul', motivo: 'bgGradient', alvo: /./, limite: 12 },
-  { fora: ['#hero', '.card-azul'], motivo: 'nonBmp', alvo: /carrossel-setas|stars-mini/, limite: 15 },
+  { dentro: '.widget-light-theme', motivo: 'bgOverlap', alvo: /mock-card/, limite: 8 },
+  { fora: ['#hero', '.card-azul', '.widget-light-theme'], motivo: 'nonBmp', alvo: /carrossel-setas|stars-mini/, limite: 15 },
 ];
 
 const medirContraste = async (page, { dentro, fora = [], motivo, alvo, limite = 0 }) => {
@@ -83,7 +84,7 @@ for (const tela of TELAS) {
 
     test('o contraste de todo o texto é medido e passa', async ({ page }) => {
       await abrir(page);
-      expect(await contrasteSemEnfeite(page, { fora: tela.foraDoContraste ? [tela.foraDoContraste] : [] })).toEqual([]);
+      expect(await contrasteSemEnfeite(page)).toEqual([]);
     });
 
     test('o formulário com erros não tem violação', async ({ page }) => {
@@ -131,9 +132,9 @@ test('o menu móvel aberto não tem violação', async ({ page }) => {
   expect(await violacoes(page, 'header')).toEqual([]);
 });
 
-// O axe não mede texto sobre degradê. Aqui, cada texto do topo e dos cartões azuis
-// é comparado com cada cor do degradê do fundo (e, no título em degradê, com cada
-// cor da letra). Exige 4,5:1, ou 3:1 em texto grande (24 px, ou 18,66 px em negrito).
+// O axe não mede texto sobre degradê nem, no celular, o painel simulado. Aqui, cada
+// texto do topo, dos cartões azuis e do painel é comparado com cada cor do fundo
+// (e, no título em degradê, com cada cor da letra). Exige 4,5:1, ou 3:1 em texto grande (24 px, ou 18,66 px em negrito).
 const medirDegrade = () => {
   const cores = (t) => [...t.matchAll(/rgba?\(([^)]+)\)/g)].map((m) => m[1].split(/[ ,/]+/).filter(Boolean).map(Number));
   const luz = ([r, g, b]) => {
@@ -146,7 +147,7 @@ const medirDegrade = () => {
     return (l1 + 0.05) / (l2 + 0.05);
   };
   const resultado = [];
-  for (const el of document.querySelectorAll('#hero *, .card-azul *')) {
+  for (const el of document.querySelectorAll('#hero *, .card-azul *, .widget-light-theme *')) {
     const temTexto = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
     if (!temTexto || !el.getClientRects().length) continue;
     const cs = getComputedStyle(el);
@@ -172,10 +173,12 @@ const medirDegrade = () => {
   return resultado;
 };
 
-test('o texto sobre degradê tem contraste com todas as cores do fundo', async ({ page }) => {
-  await page.setViewportSize({ width: 1280, height: 800 });
-  await abrir(page);
-  const medidas = await page.evaluate(medirDegrade);
-  expect(medidas.length).toBeGreaterThanOrEqual(19);
-  expect(medidas.filter((m) => m.menor < m.minimo)).toEqual([]);
-});
+for (const tela of TELAS) {
+  test(`o texto sem medida do axe tem contraste com todas as cores do fundo, no ${tela.nome}`, async ({ page }) => {
+    await page.setViewportSize(tela.viewport);
+    await abrir(page);
+    const medidas = await page.evaluate(medirDegrade);
+    expect(medidas.length).toBeGreaterThanOrEqual(27);
+    expect(medidas.filter((m) => m.menor < m.minimo)).toEqual([]);
+  });
+}
