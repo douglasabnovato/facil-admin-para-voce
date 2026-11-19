@@ -108,7 +108,7 @@ Página publicada (HTTP 200 em 16/11/2026): https://douglasabnovato.github.io/fa
 - axe-core no CI, no computador e no celular, com o contraste medido também no texto sobre degradê; o selo do topo passou de 3,1:1 para 5,6:1 ([#22](https://github.com/douglasabnovato/facil-admin-para-voce/issues/22), [#34](https://github.com/douglasabnovato/facil-admin-para-voce/issues/34), [PR #35](https://github.com/douglasabnovato/facil-admin-para-voce/pull/35)).
 - Página de privacidade ligada ao formulário: dados pedidos, finalidade, quem recebe e como pedir a exclusão ([#23](https://github.com/douglasabnovato/facil-admin-para-voce/issues/23), PR #35).
 - Critério 9 revisto: com os alertas do Dependabot ligados (0 abertos, 16/11/2026 15h06), segue Parcial só pela página de privacidade (#33).
-- LCP móvel medido de novo no site publicado: mediana 2,20 s (16/11/2026).
+- LCP móvel medido de novo no site publicado, já com este ciclo na `main`: mediana 1,55 s (18/11/2026; era 2,20 s em 16/11), [#36](https://github.com/douglasabnovato/facil-admin-para-voce/issues/36).
 - Medição com GoatCounter pronta no código, sem cookie e só no site publicado, e teste dos avisos de conteúdo ilustrativo ([#31](https://github.com/douglasabnovato/facil-admin-para-voce/pull/31)).
 - `main` protegida, com os jobs `fluxo` e `links` obrigatórios ([#29](https://github.com/douglasabnovato/facil-admin-para-voce/pull/29)).
 - Foco visível com contraste de 3:1, fonte local, `srcset` e pedido com vários pacotes ([#25](https://github.com/douglasabnovato/facil-admin-para-voce/pull/25)).
@@ -126,7 +126,8 @@ Com o responsável:
 
 Com o agente:
 
-- Medir o LCP de novo depois da publicação deste ciclo ([#36](https://github.com/douglasabnovato/facil-admin-para-voce/issues/36)).
+- Medir o contraste das setas do carrossel e das estrelas das listas ([#41](https://github.com/douglasabnovato/facil-admin-para-voce/issues/41)).
+- Conferir o LCP a cada PR com o Lighthouse no CI ([#42](https://github.com/douglasabnovato/facil-admin-para-voce/issues/42)).
 - Tirar os 4 PNG não usados, com aval do responsável ([#21](https://github.com/douglasabnovato/facil-admin-para-voce/issues/21)).
 
 ### Onde está a documentação
