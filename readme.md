@@ -12,7 +12,7 @@ Desenvolvida com foco em alta conversão, design moderno e experiência de usuá
 
 1. Abra a [demonstração](https://douglasabnovato.github.io/facil-admin-para-voce/).
 2. Clique em **Quero Encontrar Fornecedores** (síndico) ou **Cadastrar Minha Empresa** (fornecedor).
-3. Preencha o formulário de cotação: nome, WhatsApp e o que precisa. O envio vai pelo Formspree.
+3. Preencha os 5 campos da cotação (nome, WhatsApp, e-mail, perfil e a sua necessidade) e envie. O envio vai pelo Formspree.
 
 ## Telas
 
@@ -21,7 +21,7 @@ Capturas da demonstração publicada em 23/11/2026, em 360 px (celular) e 1440 p
 | | Celular (360 px) | Computador (1440 px) |
 |---|---|---|
 | **Início** | <img src=".github/capturas/inicio-celular.png" width="180" alt="Início no celular: a proposta de valor e os dois botões de entrada"> | <img src=".github/capturas/inicio-computador.png" width="480" alt="Início no computador: o menu, a proposta de valor e a imagem ilustrativa"> |
-| **Cotação** | <img src=".github/capturas/cotacao-celular.png" width="180" alt="Formulário de cotação no celular: título, nome e WhatsApp"> | <img src=".github/capturas/cotacao-computador.png" width="480" alt="Formulário de cotação no computador"> |
+| **Cotação** | <img src=".github/capturas/cotacao-celular.png" width="180" alt="Formulário de cotação no celular: título, nome e WhatsApp"> | <img src=".github/capturas/cotacao-computador.png" width="480" alt="Formulário de cotação no computador: nome, WhatsApp, e-mail, perfil e a descrição da necessidade"> |
 
 ---
 
@@ -177,7 +177,7 @@ A plataforma está em pré-lançamento. Preços, selos, avaliações, depoimento
 
 ## 🌐 Em produção
 
-**Demonstração:** https://douglasabnovato.github.io/facil-admin-para-voce/
+O link da demonstração está no topo deste README.
 
 - GitHub Pages publicando a branch `main` (pasta raiz), sem build e sem workflow; `.nojekyll` desliga o Jekyll.
 - O formulário envia pelo Formspree (campos ocultos `origem` e `_subject` identificam este site).
